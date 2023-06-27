@@ -1,0 +1,47 @@
+@mixin mfc-headline1 {
+  font-family: 'Titillium_Web' !important;
+  font-style:normal;
+  font-weight:700 !important;
+  font-size: 30px !important;
+  line-height: .9em;
+}
+
+@mixin mfc-headline2 {
+  font-family: 'Titillium_Web' !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@mixin mfc-headline3 {
+  font-family: 'Oswald' !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin mfc-subtitle {
+  font-family: 'Titillium_Web' !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+@mixin mfc-subtitle2 {
+  font-family: 'Titillium_Web' !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin mfc-body-text {
+  font-family: 'Titillium_Web' !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px !important;
+  line-height: 16px;
+}

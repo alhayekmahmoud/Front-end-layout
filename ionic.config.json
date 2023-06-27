@@ -1,0 +1,7 @@
+{
+  "name": "MFC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

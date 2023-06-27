@@ -1,0 +1,12 @@
+{
+  "pages":{
+    "login":{
+      "login":"LOGIN"
+    },
+    "tabs":{
+      "home":{},
+      "profile":{},
+      "settings":{}
+    }
+  }
+}

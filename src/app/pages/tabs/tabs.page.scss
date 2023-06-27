@@ -1,0 +1,23 @@
+ion-tabs{
+  background: var(--ion-color-white);
+  ion-tab-bar{
+    position: relative;
+    background: var(--ion-color-dark);
+    width: 90%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border-radius: 10px;
+    padding-bottom:0;
+    border: 1px solid rgb(2, 52, 54, 0.85);
+    overflow: hidden;
+    box-shadow: 0px -5px 10px rgba(133, 135, 135, 0.8);
+    ion-tab-button{
+      --background: var(--ion-color-dark);
+      --color: var(--ion-color-tertiary);
+      --color-selected: var(--ion-color-tertiary);
+      ion-icon{
+        font-size: 1.9rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../../theme/typography.scss';
+
+// ion-container{
+  ion-content{
+    --background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, -0.5)), url(../../../assets/images/login/loginBackground.png)0 0/100% 100% no-repeat;
+    .title{
+      h1 {
+        @include mfc-headline1;
+        position: absolute;
+        display: block;
+        color: var(--ion-color-tertiary);
+        top: 50px;
+        left: 15%;
+      }
+    }
+  }
+// }
