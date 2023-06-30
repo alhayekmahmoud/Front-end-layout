@@ -5,9 +5,24 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-segment [value]="activeSegment$ | async">
+  <ion-segment-button value="buy-new-car" (click)="activeSegment$.next('buy-new-car')">
+      <ion-label>Buy new car</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="buy-old-car" (click)="activeSegment$.next('buy-old-car')">
+      <ion-label>Buy old car</ion-label>
+    </ion-segment-button>
+   <ion-segment-button value="sell-my-car" (click)="activeSegment$.next('sell-my-car')">
+      <ion-label>Sell my car</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div *ngIf="(activeSegment$ | async) === 'buy-new-car'">
+    <h1>buy-new-car</h1>
+  </div>
+  <div *ngIf="(activeSegment$ | async) === 'buy-old-car'">
+    <h1>buy-old-car</h1>
+  </div>
+  <div *ngIf="(activeSegment$ | async) === 'sell-my-car'">
+    <h1>sell-my-car</h1>
+  </div>
 </ion-content>

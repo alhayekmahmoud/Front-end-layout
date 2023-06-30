@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'mfc-login-card',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginCardComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+  public  onLoginButtonCliked(){
+    this.router.navigate(['/start']);
+  }
 
 }

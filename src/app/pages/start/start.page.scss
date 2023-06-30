@@ -1,0 +1,119 @@
+@import "../../../theme/typography.scss";
+
+ion-header {
+  ion-item-group {
+    ion-item {
+      ion-thumbnail {
+        background: black;
+        height: 50px;
+        img {
+          padding: 8px;
+        }
+      }
+      ion-item.company-addess {
+        margin-bottom: 0px;
+        ion-row {
+          position: relative;
+          left: -8px;
+          ion-avatar {
+            padding: 0;
+            position: relative;
+            width: 15px;
+            display: grid;
+            align-items: end;
+            ion-icon {
+              font-size: 20px;
+            }
+          }
+          ion-label {
+            @include mfc-lable1;
+            margin-bottom: 0px;
+            margin-top: 23px;
+            p {
+              @include mfc-lable1;
+              margin-top: -10px;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+    .btn-menu {
+      margin-top: 28px;
+    }
+  }
+}
+
+ion-content {
+  ion-grid {
+    margin: 0;
+    padding: 0;
+    ion-row {
+      swiper-container {
+        width: 90%;
+
+        swiper-slide {
+          margin: 0 !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          ion-card {
+            width: 70%;
+            box-shadow: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            img {
+              border-radius: 10px;
+            }
+            ion-card-header {
+              padding: 0;
+              margin: 35px 0 35px 0;
+              ion-card-title {
+                @include mfc-lable2;
+              }
+            }
+            ion-card-content {
+              padding: 0;
+              margin-bottom: 35px;
+              font-size: 1em;
+            }
+            ion-button {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}

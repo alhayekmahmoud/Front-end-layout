@@ -12,11 +12,6 @@ export class AppComponent implements OnInit{
   async ngOnInit() {
     await SplashScreen.hide();
 
-    // Show the splash for an indefinite amount of time:
-    // await SplashScreen.show({
-    //   autoHide: false,
-    // });
-
     // Show the splash for two seconds and then automatically hide it:
     await SplashScreen.show({
       showDuration: 2000,

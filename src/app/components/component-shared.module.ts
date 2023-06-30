@@ -6,18 +6,25 @@ import { IonicModule } from '@ionic/angular';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {TranslocoRootModule} from 'src/app/transloco-root.module'
 import { LoginCardComponent } from './base/cards/login-card/login-card.component';
+import { PopoverMenuComponent } from './base/popover-menu/popover-menu.component';
+import { register } from 'swiper/element/bundle';
 
+register();
 
 @NgModule({
   declarations: [
-    LoginCardComponent
+    LoginCardComponent,
+    PopoverMenuComponent
   ],
-  imports: [CommonModule,
+  imports: [
+    CommonModule,
      IonicModule,
-     TranslocoRootModule],
+     TranslocoRootModule
+    ],
   exports: [
     LoginCardComponent,
-    TranslocoRootModule
+    TranslocoRootModule,
+    PopoverMenuComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

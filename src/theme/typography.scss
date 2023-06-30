@@ -15,7 +15,30 @@
 }
 
 @mixin mfc-headline3 {
-  font-family: 'Oswald' !important;
+  font-family: 'Titillium_Web' !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin mfc-lable1 {
+  font-family: 'Titillium_Web' !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+@mixin mfc-lable2 {
+  font-family: 'Titillium_Web' !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+}
+@mixin mfc-lable3 {
+  font-family: 'Titillium_Web' !important;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

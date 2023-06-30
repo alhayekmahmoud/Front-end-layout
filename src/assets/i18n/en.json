@@ -3,8 +3,13 @@
     "login":{
       "login":"LOGIN"
     },
+    "start":{
+
+    },
     "tabs":{
-      "home":{},
+      "home":{
+
+      },
       "profile":{},
       "settings":{}
     }
