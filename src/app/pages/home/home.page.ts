@@ -1,4 +1,4 @@
-import { StorageService } from 'src/app/services/storage.service';
+import { StorageService } from 'src/app/services/storage/storage.service';
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { PopoverMenuComponent } from 'src/app/components/base/popover-menu/popover-menu.component';

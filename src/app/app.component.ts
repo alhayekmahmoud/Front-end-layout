@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SplashScreen } from '@capacitor/splash-screen';
+import { StorageService } from './services/storage/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { SplashScreen } from '@capacitor/splash-screen';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit{
-  constructor( private router: Router,) {}
+  constructor( private router: Router, private storageService: StorageService) {}
   async ngOnInit() {
     await SplashScreen.hide();
 
@@ -17,6 +18,12 @@ export class AppComponent implements OnInit{
       showDuration: 2000,
       autoHide: true,
     });
-    this.router.navigate(['/login']);
+    const isloged = await this.storageService.get<boolean>('isloged');
+
+     if( isloged){
+      console.log('you are loged in');
+
+    }else
+     this.router.navigate(['/login']);
   }
 }

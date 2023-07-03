@@ -6,7 +6,7 @@
   <ion-row>
     <swiper-container [slidesPerView]="2.5">
       <swiper-slide *ngFor="let car of newLunched" class="ion-margin">
-        <ion-card class="ion-no-margin"  [routerLink]="['/', 'tabs', 'item', car.id]">
+        <ion-card class="ion-no-margin"  [routerLink]="['/', 'car', car.id]">
           <ion-card-header class="ion-no-padding">
             <img [src]="car?.img" alt="{{car?.name}}">
           </ion-card-header>

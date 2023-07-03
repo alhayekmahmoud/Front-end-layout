@@ -1,8 +1,9 @@
+import { Storage } from '@ionic/storage-angular';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { PopoverMenuComponent } from 'src/app/components/base/popover-menu/popover-menu.component';
-import { StorageService } from 'src/app/services/storage.service';
+import { StorageService } from 'src/app/services/storage/storage.service';
 
 import { register } from 'swiper/element/bundle';
 
@@ -37,7 +38,7 @@ export class StartPage implements OnInit {
 
   public  async buyNewCarHandlButton(activeSegment : string){
     await this.storageService.set<string>('activeSegment', activeSegment);
-    this.router.navigate(['/home']);
+    this.router.navigate(['/tabs/home']);
 
 
   }

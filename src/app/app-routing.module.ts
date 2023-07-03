@@ -4,7 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
+    redirectTo: 'tabs/home',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
   {
     path: 'login',
@@ -13,6 +18,11 @@ const routes: Routes = [
   {
     path: 'start',
     loadChildren: () => import('./pages/start/start.module').then( m => m.StartPageModule)
+  },
+
+  {
+    path: 'car/:id',
+    loadChildren: () => import('./pages/car/car.module').then( m => m.CarPageModule)
   },
 
 ];

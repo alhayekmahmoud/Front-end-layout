@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-item-group>
+    <ion-item lines="none">
+      <div slot="end">
+        <ion-thumbnail>
+          <img src="../../../assets/images/logo.webp" alt="img">
+        </ion-thumbnail>
+      </div>
+      <div class="back" slot="start">
+        <ion-back-button defaultHref="start"></ion-back-button>
+      </div>
+    </ion-item>
+  </ion-item-group>
+</ion-header>
+<ion-content>
+  <ion-grid class="ion-margin-top">
+    <ion-item lines="none"color="light">
+      <ion-label class="title">New Launched</ion-label>
+      <ion-button slot="end" size="small" shape="round" color="primary">View All</ion-button>
+    </ion-item>
+    <ion-row>
+          <ion-card class="ion-no-margin" >
+            <ion-card-header class="ion-no-padding">
+              <img [src]="car.img" alt="{{car.name}}">
+            </ion-card-header>
+            <ion-card-content class="ion-no-padding">
+              <ion-item lines="none">
+                <ion-label>
+                  {{car?.name}}
+                </ion-label>
+                <ion-text class="price" slot="end" color="primary"><b>{{car?.category}}</b></ion-text>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

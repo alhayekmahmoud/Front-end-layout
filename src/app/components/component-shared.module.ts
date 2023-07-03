@@ -25,6 +25,7 @@ import { NewLunchedCarComponent } from './base/tags/old-car-tag/new-lunched-car/
 import { OldExpertReviewTagComponent } from './base/tags/old-car-tag/old-expert-review-tag/old-expert-review-tag.component';
 import { OldOfferTagComponent } from './base/tags/old-car-tag/old-offer-tag/old-offer-tag.component';
 import { OldTopCareTagComponent } from './base/tags/old-car-tag/old-top-care-tag/old-top-care-tag.component';
+import { RouterModule } from '@angular/router';
 
 register();
 
@@ -52,7 +53,8 @@ register();
   imports: [
     CommonModule,
      IonicModule,
-     TranslocoRootModule
+     TranslocoRootModule,
+     RouterModule
     ],
   exports: [
     LoginCardComponent,
