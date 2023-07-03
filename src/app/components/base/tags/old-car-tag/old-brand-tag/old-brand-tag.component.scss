@@ -1,0 +1,47 @@
+@import "../../../../../../theme/typography.scss";
+
+
+ion-grid {
+  ion-item {
+    ion-label {
+    }
+    ion-button {
+    }
+  }
+  ion-row {
+    swiper-container {
+      height: 200px;
+      background: black;
+      swiper-slide {
+        background: white;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ion-card {
+          width: 100%;
+          box-shadow: none;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          ion-card-header {
+            padding: 5px;
+            img {
+              border-radius: 10px;
+            }
+          }
+          ion-card-content {
+            ion-item {
+              ion-label {
+                @include mfc-lable1;
+              }
+              ion-text {
+                @include mfc-lable1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

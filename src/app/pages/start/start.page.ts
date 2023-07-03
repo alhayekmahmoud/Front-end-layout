@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { PopoverMenuComponent } from 'src/app/components/base/popover-menu/popover-menu.component';
+import { StorageService } from 'src/app/services/storage.service';
 
 import { register } from 'swiper/element/bundle';
 
@@ -14,28 +15,13 @@ register();
 })
 export class StartPage implements OnInit {
 
-  slideOpts={
-    slidesPeriew:2.2,
-  };
-  slidesOpts1={
-    slidesPerview:1.3,
-  };
-  populerItems:any[]=[];
-  featuredItems:any[]=[];
-
-  item: any[]=[
-    {id:1, name:'Aloe Plant', price:700, category:'Aalen', img:'assets/images/start/key.webp'},
-    {id:2, name:'Echeveria', price:500, category:'Aalen', img:'assets/images/start/firstCar.jpg'},
-    {id:3, name:'snake Plant', price:800, category:'Stuttgert', img:'assets/images/sale.jpg'}
-  ]
 
 
-  constructor(private popCtrl: PopoverController, private router:Router) { }
+
+  constructor(private popCtrl: PopoverController, private router:Router, private storageService : StorageService ) { }
 
   ngOnInit() {
 
-    this.populerItems= this.item;
-    this.featuredItems= this.item;
   }
   async openPopOver(ev: any) {
     console.log('I am Popo over');
@@ -49,14 +35,17 @@ export class StartPage implements OnInit {
     return await popover.present();
   }
 
-  public  buyNewCarHandlButton(){
+  public  async buyNewCarHandlButton(activeSegment : string){
+    await this.storageService.set<string>('activeSegment', activeSegment);
     this.router.navigate(['/home']);
+
+
   }
 
 
-  getItem(id: any){
-    const item =this.item.find(x=>x.id==id);
-    return item
-  }
+  // getItem(id: any){
+  //   const item =this.item.find(x=>x.id==id);
+  //   return item
+  // }
 
 }

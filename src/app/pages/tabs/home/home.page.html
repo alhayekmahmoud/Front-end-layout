@@ -1,7 +1,16 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
+  <ion-item-group>
+    <ion-item lines="none">
+      <div slot="end">
+        <ion-thumbnail>
+          <img src="../../../assets/images/logo.webp" alt="img">
+        </ion-thumbnail>
+      </div>
+      <div class="back" slot="start">
+        <ion-back-button defaultHref="start"></ion-back-button>
+      </div>
+    </ion-item>
+  </ion-item-group>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -17,12 +26,12 @@
     </ion-segment-button>
   </ion-segment>
   <div *ngIf="(activeSegment$ | async) === 'buy-new-car'">
-    <h1>buy-new-car</h1>
+    <mfc-home-new-car></mfc-home-new-car>
   </div>
   <div *ngIf="(activeSegment$ | async) === 'buy-old-car'">
-    <h1>buy-old-car</h1>
+    <mfc-home-old-car></mfc-home-old-car>
   </div>
   <div *ngIf="(activeSegment$ | async) === 'sell-my-car'">
-    <h1>sell-my-car</h1>
+    <mfc-home-sell-car></mfc-home-sell-car>
   </div>
 </ion-content>

@@ -1,73 +1,40 @@
 <ion-header [translucent]="true">
   <ion-item-group>
     <ion-item lines="none">
-      <div>
+      <div slot="end">
         <ion-thumbnail>
           <img src="../../../assets/images/logo.webp" alt="img">
         </ion-thumbnail>
       </div>
-
-
-
-      <ion-item lines="none" class="company-addess">
-        <ion-row>
-          <ion-col>
-            <ion-avatar>
-              <ion-icon name="location-outline"></ion-icon>
-            </ion-avatar>
-          </ion-col>
-          <ion-col>
-            <ion-label>
-              <ion-text class="ion-no-margin">stauffenberg str. 36</ion-text>
-              <p>
-                <ion-text class="ion-no-margin">
-                  73431, Aalen
-                </ion-text>
-              </p>
-            </ion-label>
-          </ion-col>
-
-        </ion-row>
-
-      </ion-item>
-      <ion-button class="btn-menu" (click)="openPopOver($event)" type="submit" fill="white" slot="end"> <ion-icon
-          slot="icon-only" name="menu" size="large"></ion-icon>
-
-      </ion-button>
-      <!-- <ion-text slot="end" color="primary">
-        product?.stock
-      </ion-text> -->
+      <div class="back" slot="start">
+        <ion-back-button defaultHref="start"></ion-back-button>
+      </div>
     </ion-item>
   </ion-item-group>
 </ion-header>
 
 
-<ion-content >
+<ion-content>
   <ion-grid class="ion-margin-top">
     <ion-row>
-      <swiper-container
-      class="mySwiper"
-      space-between="30"
-      slides-per-view="1.2"
-      centered-slides="true"
-      autoplay-delay="2500"
-      autoplay-disable-on-interaction="false"
-     >
+      <swiper-container class="mySwiper" centered-slides="true" pagination="true" pagination-type="fraction">
         <swiper-slide class="ion-margin">
           <ion-card>
-            <img src="assets/images/start/key.webp" alt="first car" />
-            <ion-card-header>
-              <ion-card-title>car</ion-card-title>
-              <ion-card-title>first dream</ion-card-title>
-              <ion-card-title>Buy your</ion-card-title>
+            <img src="assets/images/start/key.jpg" alt="first car" />
 
+            <ion-card-header>
+              <ion-card-title>Buy your</ion-card-title>
+              <ion-card-title>first dream</ion-card-title>
+              <ion-card-title>car</ion-card-title>
             </ion-card-header>
 
             <ion-card-content>
               Here's a small text description for the car. Nothing more, nothing less.
               Here's a small text description for the car. Nothing more, nothing less.
             </ion-card-content>
-            <ion-button expand="block" color="tertiary" align="bottom" (click)="buyNewCarHandlButton()">Buy new car</ion-button>
+
+            <ion-button expand="block" color="tertiary" align="bottom" (click)="buyNewCarHandlButton('buy-new-car')">Buy new
+              car</ion-button>
           </ion-card>
         </swiper-slide>
         <swiper-slide class="ion-margin">
@@ -84,7 +51,8 @@
               Here's a small text description for the car. Nothing more, nothing less.
               Here's a small text description for the car. Nothing more, nothing less.
             </ion-card-content>
-            <ion-button expand="block" color="tertiary" align="bottom" (click)="buyNewCarHandlButton()">Buy old car</ion-button>
+            <ion-button expand="block" color="tertiary" align="bottom" (click)="buyNewCarHandlButton('buy-old-car')">Buy old
+              car</ion-button>
           </ion-card>
         </swiper-slide>
         <swiper-slide class="ion-margin">
@@ -101,15 +69,10 @@
               Here's a small text description for the car. Nothing more, nothing less.
               Here's a small text description for the car. Nothing more, nothing less.
             </ion-card-content>
-            <ion-button expand="block" color="tertiary" align="bottom" (click)="buyNewCarHandlButton()">Sell my car</ion-button>
+            <ion-button expand="block" color="tertiary" align="bottom" (click)="buyNewCarHandlButton('sell-my-car')">Sell my
+              car</ion-button>
           </ion-card>
         </swiper-slide>
-        <div class="autoplay-progress" slot="container-end">
-          <svg viewBox="0 0 48 48">
-            <circle cx="24" cy="24" r="20"></circle>
-          </svg>
-          <span></span>
-        </div>
       </swiper-container>
     </ion-row>
   </ion-grid>

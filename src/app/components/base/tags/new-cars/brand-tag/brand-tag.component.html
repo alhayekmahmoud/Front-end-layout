@@ -1,0 +1,16 @@
+<ion-grid class="ion-margin-top">
+  <ion-item lines="none"color="light">
+    <ion-label class="title">Shop by Brand</ion-label>
+  </ion-item>
+  <ion-row>
+    <swiper-container [slidesPerView]="2.5">
+      <swiper-slide *ngFor="let car of brands" class="ion-margin">
+        <ion-card class="ion-no-margin"  [routerLink]="['/', 'tabs', 'item', car.id]">
+          <ion-card-header class="ion-no-padding">
+            <img [src]="car?.img" alt="{{car?.name}}">
+          </ion-card-header>
+        </ion-card>
+      </swiper-slide>
+    </swiper-container>
+  </ion-row>
+</ion-grid>

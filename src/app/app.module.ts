@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 
 import { register } from 'swiper/element/bundle';
+import { IonicStorageModule } from '@ionic/storage-angular';
 
 register();
 
@@ -21,6 +22,7 @@ register();
     AppRoutingModule,
     HttpClientModule,
     TranslocoRootModule,
+    IonicStorageModule.forRoot(),
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

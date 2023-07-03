@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'mfc-new-car-tag',
+  templateUrl: './new-car-tag.component.html',
+  styleUrls: ['./new-car-tag.component.scss'],
+})
+export class NewCarTagComponent  implements OnInit {
+  newLunched: any[]=[
+
+    {id:1, name:'BMW', price:700, category:'er5', img:'assets/images/home/newCars/BMW5.jpg'},
+    {id:1, name:'BMW', price:700, category:'er6', img:'assets/images/home/newCars/BMW6.jpg'},
+
+    {id:1, name:'VW', price:700, category:'er1', img:'assets/images/home/newCars/vw1.jpg'},
+    {id:1, name:'VW', price:700, category:'er2', img:'assets/images/home/newCars/vw2.jpg'},
+
+    {id:1, name:'Mercedes', price:700, category:'er1', img:'assets/images/home/newCars/MERCIDES1.jpg'},
+    {id:1, name:'Mercedes', price:700, category:'er2', img:'assets/images/home/newCars/MERCIDES2.jpg'},
+
+  ];
+
+  constructor() { }
+
+  ngOnInit() {}
+
+}

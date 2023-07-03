@@ -1,0 +1,17 @@
+@import "../../../../theme/typography.scss";
+
+
+ion-header {
+  ion-item-group {
+    ion-item {
+      ion-thumbnail {
+        background: black;
+        height: 50px;
+        margin: 10px 10px 0 0;
+        img {
+          padding: 8px;
+        }
+      }
+    }
+  }
+}
