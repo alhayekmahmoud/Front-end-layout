@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-item-group>
-    <ion-item lines="none">
+    <ion-item lines="none" >
       <div slot="end">
         <ion-thumbnail>
           <img src="../../../assets/images/logo.webp" alt="img">
@@ -15,8 +15,7 @@
 <ion-content>
   <ion-grid class="ion-margin-top">
     <ion-item lines="none"color="light">
-      <ion-label class="title">New Launched</ion-label>
-      <ion-button slot="end" size="small" shape="round" color="primary">View All</ion-button>
+      <ion-label class="title">{{car.name}}</ion-label>
     </ion-item>
     <ion-row>
           <ion-card class="ion-no-margin" >

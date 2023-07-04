@@ -1,9 +1,19 @@
 ion-header {
-  ion-toolbar {
-    --padding-start: 16px;
-    --padding-end: 16px;
+  box-shadow: none;
+  ion-item-group {
+    ion-item {
+      ion-thumbnail {
+        background: black;
+        height: 50px;
+        margin: 10px;
+        img {
+          padding: 8px;
+        }
+      }
+    }
   }
 }
+
 ion-content {
   ion-button {
     margin: 10%;

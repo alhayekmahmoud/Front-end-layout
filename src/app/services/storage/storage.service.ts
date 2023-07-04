@@ -9,7 +9,7 @@ export class StorageService {
   private appStorage: Storage | null = null;
 
   constructor(private storage: Storage) {
-    // Yes we are calling an async method from the constructor but this is like in the documentation of ionic/storage-angular
+
     this.init();
   }
 
