@@ -34,7 +34,21 @@
   font-family: Titillium_Web;
   src: url('./assets/Fonts/Titillium_Web/TitilliumWeb-Bold.ttf');
 }
+@font-face {
+  font-family: Montserrat;
+  src: url('./assets/Fonts/Montserrat/Montserrat-Light.ttf');
+}
  :root[mode='md']{
   --ion-font-family: 'Titillium_Web' !important;
   font-family: 'Titillium_Web' !important;
  }
+
+ ion-action-sheet.my-custom-class {
+  --background: var(--ion-color-mfc-primary);
+  --backdrop-opacity: 0.6;
+  --button-background-selected: var(--ion-color-mfc-primary);
+  --button-color:var(--ion-color-mfc-default);
+  --color: #fff;
+  /* role: "destructive" button iOS styling override */
+  --ion-color-danger:var(--ion-color-mfc-warning);
+}

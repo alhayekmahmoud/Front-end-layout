@@ -1,0 +1,12 @@
+@import "../../../../theme/typography.scss";
+
+  ion-button {
+    @include mfc-button;
+    color: white !important;
+  }
+
+h4{
+  @include mfc-subtitle;
+}
+
+

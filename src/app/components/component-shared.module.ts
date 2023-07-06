@@ -26,6 +26,12 @@ import { OldExpertReviewTagComponent } from './base/tags/old-car-tag/old-expert-
 import { OldOfferTagComponent } from './base/tags/old-car-tag/old-offer-tag/old-offer-tag.component';
 import { OldTopCareTagComponent } from './base/tags/old-car-tag/old-top-care-tag/old-top-care-tag.component';
 import { RouterModule } from '@angular/router';
+import { ActionSheetComponent } from './mfc/action-sheet/action-sheet.component';
+import { AccordionComponent } from './mfc/accordion/accordion.component';
+import { AlertComponent } from './mfc/alert/alert.component';
+import { BadgeComponent } from './mfc/badge/badge.component';
+import { BreadcrumbComponent } from './mfc/breadcrumb/breadcrumb.component';
+import { ButtonsComponent } from './mfc/buttons/buttons.component';
 
 register();
 
@@ -47,7 +53,13 @@ register();
     NewLunchedCarComponent,
     OldExpertReviewTagComponent,
     OldOfferTagComponent,
-    OldTopCareTagComponent
+    OldTopCareTagComponent,
+    ActionSheetComponent,
+    AccordionComponent,
+    AlertComponent,
+    BadgeComponent,
+    BreadcrumbComponent,
+    ButtonsComponent
 
   ],
   imports: [
@@ -74,7 +86,14 @@ register();
     NewLunchedCarComponent,
     OldExpertReviewTagComponent,
     OldOfferTagComponent,
-    OldTopCareTagComponent
+    OldTopCareTagComponent,
+    ActionSheetComponent,
+    AccordionComponent,
+    AlertComponent,
+    BadgeComponent,
+    BreadcrumbComponent,
+    ButtonsComponent
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

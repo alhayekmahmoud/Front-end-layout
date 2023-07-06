@@ -20,6 +20,10 @@ const routes: Routes = [
         path: 'profile',
         loadChildren: () => import('../profile/profile.module').then( m => m.ProfilePageModule)
       },
+      {
+        path: 'mfc',
+        loadChildren: () => import('../mfctemplate/mfctemplate.module').then( m => m.MfctemplatePageModule)
+      },
     ],
   },
 

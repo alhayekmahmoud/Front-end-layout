@@ -1,13 +1,13 @@
 @mixin mfc-headline1 {
-  font-family: 'Titillium_Web' !important;
-  font-style:normal;
-  font-weight:700 !important;
+  font-family: "Titillium_Web" !important;
+  font-style: normal;
+  font-weight: 700 !important;
   font-size: 30px !important;
-  line-height: .9em;
+  line-height: 0.9em;
 }
 
 @mixin mfc-headline2 {
-  font-family: 'Titillium_Web' !important;
+  font-family: "Titillium_Web" !important;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -15,7 +15,7 @@
 }
 
 @mixin mfc-headline3 {
-  font-family: 'Titillium_Web' !important;
+  font-family: "Titillium_Web" !important;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -23,7 +23,7 @@
 }
 
 @mixin mfc-lable1 {
-  font-family: 'Titillium_Web' !important;
+  font-family: "Titillium_Web" !important;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -31,14 +31,14 @@
 }
 
 @mixin mfc-lable2 {
-  font-family: 'Titillium_Web' !important;
+  font-family: "Titillium_Web" !important;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
 }
 @mixin mfc-lable3 {
-  font-family: 'Titillium_Web' !important;
+  font-family: "Titillium_Web" !important;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -46,7 +46,7 @@
 }
 
 @mixin mfc-subtitle {
-  font-family: 'Titillium_Web' !important;
+  font-family: "Titillium_Web" !important;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -54,7 +54,7 @@
 }
 
 @mixin mfc-subtitle2 {
-  font-family: 'Titillium_Web' !important;
+  font-family: "Titillium_Web" !important;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -62,9 +62,49 @@
 }
 
 @mixin mfc-body-text {
-  font-family: 'Titillium_Web' !important;
+  font-family: "Titillium_Web" !important;
   font-style: normal;
   font-weight: 400;
   font-size: 12px !important;
   line-height: 16px;
+}
+
+/** mfc template **/
+@mixin mfc-header1 {
+  display: block;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 3.6em;
+}
+@mixin mfc-title {
+  display: block;
+  font-family: "Montserrat" !important;
+  font-weight: 300;
+  line-height: 1.4;
+  font-size: 1.8rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+@mixin mfc-subtitle {
+  display: block;
+  font-family: "Montserrat" !important;
+  font-weight: 300;
+  line-height: 1.4;
+  font-size: .8rem;
+
+}
+@mixin mfc-button {
+  box-sizing: border-box;
+  border-width: 2px;
+  border-color: var(--ion-color-mfc-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.75;
+  margin-right: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 1;
 }
