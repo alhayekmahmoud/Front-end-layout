@@ -1,6 +1,16 @@
 @import "../../../theme/typography.scss";
 
+ion-header {
+  ion-toolbar {
+    --background: transparent;
+    --bordr-color: transparent;
+  }
+}
+
+
 ion-content {
+  --offset-top: 0px;
+  position: absolute;
   ion-row{
     margin: 10px auto;
     div.component-title{

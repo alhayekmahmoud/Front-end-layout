@@ -32,6 +32,7 @@ import { AlertComponent } from './mfc/alert/alert.component';
 import { BadgeComponent } from './mfc/badge/badge.component';
 import { BreadcrumbComponent } from './mfc/breadcrumb/breadcrumb.component';
 import { ButtonsComponent } from './mfc/buttons/buttons.component';
+import { CardComponent } from './mfc/card/card.component';
 
 register();
 
@@ -59,7 +60,8 @@ register();
     AlertComponent,
     BadgeComponent,
     BreadcrumbComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    CardComponent
 
   ],
   imports: [
@@ -92,7 +94,8 @@ register();
     AlertComponent,
     BadgeComponent,
     BreadcrumbComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    CardComponent,
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

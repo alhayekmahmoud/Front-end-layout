@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { StartPageRoutingModule } from './start-routing.module';
 
 import { StartPage } from './start.page';
+import { SharedDirectivesModule } from 'src/app/directives/shared-directives.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    StartPageRoutingModule
+    StartPageRoutingModule,
+    SharedDirectivesModule
   ],
   declarations: [StartPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

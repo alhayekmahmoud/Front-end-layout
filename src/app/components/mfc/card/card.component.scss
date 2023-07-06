@@ -1,0 +1,36 @@
+@import "../../../../theme/typography.scss";
+ion-card {
+  img {
+  }
+  ion-avatar {
+    position: relative;
+    display: block;
+    top: -50px;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      vertical-align: middle;
+      position: relative;
+      --offset-top: 10px;
+    }
+  }
+  h3{
+    @include mfc-subtitle;
+    position: relative;
+    top: -40px;
+    margin:0
+  }
+  ion-card-header {
+    ion-card-title {
+
+    }
+    ion-card-subtitle {
+    }
+  }
+
+  ion-card-content {
+  }
+}

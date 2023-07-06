@@ -11,5 +11,6 @@ export class MfctemplatePage implements OnInit {
 
   ngOnInit() {
   }
+  close(){}
 
 }

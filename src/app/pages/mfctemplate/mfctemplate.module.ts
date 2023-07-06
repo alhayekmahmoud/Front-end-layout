@@ -8,6 +8,7 @@ import { MfctemplatePageRoutingModule } from './mfctemplate-routing.module';
 
 import { MfctemplatePage } from './mfctemplate.page';
 import { ComponentSharedModule } from 'src/app/components/component-shared.module';
+import { SharedDirectivesModule } from 'src/app/directives/shared-directives.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ComponentSharedModule } from 'src/app/components/component-shared.modul
     FormsModule,
     IonicModule,
     MfctemplatePageRoutingModule,
-    ComponentSharedModule
+    ComponentSharedModule,
+    SharedDirectivesModule
   ],
   declarations: [MfctemplatePage]
 })
