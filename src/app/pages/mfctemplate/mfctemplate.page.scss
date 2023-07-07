@@ -1,32 +1,51 @@
 @import "../../../theme/typography.scss";
 
-ion-header {
-  ion-toolbar {
-    --background: transparent;
-    --bordr-color: transparent;
+ion-menu {
+  ion-header {
+    ion-toolbar {
+      ion-title {
+      }
+    }
+  }
+  ion-content {
   }
 }
 
+ion-header {
+  border: none;
+    box-shadow: none;
+  --min-height: 48px;
+  --max-height: 100px;
+  ion-toolbar {
+    --max-height: 100px;
+    --min-height: 90px;
+    --background: transparent;
+    --bordr-color: transparent;
+    --border:none;
+  }
+  ion-buttons[slot="end"] {
+    margin-right: 20px;
+  }
+  ion-buttons[slot="start"] {
+    margin-left: 20px;
+  }
+}
 
 ion-content {
   --offset-top: 0px;
   position: absolute;
-  ion-row{
+  ion-row {
     margin: 10px auto;
-    div.component-title{
+    div.component-title {
       display: block;
       margin-left: auto;
       margin-right: auto;
       width: 90%;
-      h3{
+      h3 {
         position: relative;
         margin: 30px;
         @include mfc-title;
       }
     }
   }
-
 }
-
-
-

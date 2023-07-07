@@ -1,3 +1,4 @@
+import { CheckboxesComponent } from './mfc/checkboxes/checkboxes.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
@@ -33,6 +34,7 @@ import { BadgeComponent } from './mfc/badge/badge.component';
 import { BreadcrumbComponent } from './mfc/breadcrumb/breadcrumb.component';
 import { ButtonsComponent } from './mfc/buttons/buttons.component';
 import { CardComponent } from './mfc/card/card.component';
+import { MenuComponent } from './mfc/menu/menu.component';
 
 register();
 
@@ -61,7 +63,9 @@ register();
     BadgeComponent,
     BreadcrumbComponent,
     ButtonsComponent,
-    CardComponent
+    CardComponent,
+    MenuComponent,
+    CheckboxesComponent
 
   ],
   imports: [
@@ -96,6 +100,8 @@ register();
     BreadcrumbComponent,
     ButtonsComponent,
     CardComponent,
+    MenuComponent,
+    CheckboxesComponent
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

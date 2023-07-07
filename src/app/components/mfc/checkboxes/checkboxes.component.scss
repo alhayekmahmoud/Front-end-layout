@@ -1,0 +1,38 @@
+@import "../../../../theme/typography.scss";
+
+// ion-checkbox[labelPlacement="start"]{
+//   @include mfc-subtitle;
+// }
+h3 {
+  @include mfc-subtitle;
+  color: #f5593d
+}
+div.label-placement,
+div.basic-usage,
+div.justification,
+div.theming {
+  @include mfc-subtitle;
+  margin: 20px;
+
+}
+ion-list{
+  ion-item{
+    ion-checkbox{
+      @include mfc-subtitle;
+    }
+  }
+}
+
+div.theming{
+
+ion-checkbox.checkbox-style {
+  --size: 32px;
+  --checkbox-background-checked: #f5593d;
+}
+
+ion-checkbox.checkbox-style::part(container) {
+  border-radius: 6px;
+  border: 2px solid #f5593d;
+}
+}
+

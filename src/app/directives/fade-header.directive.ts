@@ -13,10 +13,12 @@ export class FadeHeaderDirective {
   }
   @HostListener('ionScroll', ['$event']) onContentScroll($event:any){
     let scrollTop= $event.detail.scrollTop;
-    if (scrollTop>= 255){
+    if (scrollTop>= 225){
       scrollTop= 225;
     }
     const hexDist = scrollTop.toString(16);
+    console.log(hexDist);
+
     this.domCtrl.write(()=>{
       this.toolbar.style.setProperty('--background', `#ffffff${hexDist}`)
     })
