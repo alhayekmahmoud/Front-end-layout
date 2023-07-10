@@ -1,0 +1,45 @@
+
+<ion-card>
+  <ng-container *transloco="let t; ">
+  <ion-list class="car-list" *ngIf="items.length>0" >
+
+    <ion-list-header>
+      <ion-label color="medium">buy old car</ion-label>
+    </ion-list-header>
+
+    <ion-item-group>
+      <ion-item lines="full" *ngFor="let car of items " >
+        <div >
+          <ion-thumbnail slot="start" class="ion-text-center" >
+            <img src= "{{car}}" alt="img">
+
+            <!-- <img src= "assets/images/mfc/cars/Audi/1.jpg" alt="img"> -->
+          </ion-thumbnail>
+        </div>
+
+        <ion-label>
+          <ion-text class="ion-margin">Car Name</ion-text>
+          <p>
+            <ion-text class="ion-margin">
+              Lunched on: 08.07.2023
+            </ion-text>
+          </p>
+        </ion-label>
+        <ion-text slot="end" color="primary">
+          $3400
+        </ion-text>
+      </ion-item>
+    </ion-item-group>
+
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ng-container>
+</ion-card>
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+@import "../../../../../theme/typography.scss";
+
+ion-avatar{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3{
+  @include mfc-subtitle;
+  position: relative;
+  top: -10px;
+  margin:0
+}
+
+ion-chip{
+  background-color: var(--ion-color-mfc-info);
+}

@@ -1,7 +1,8 @@
+import { PopoversComponent } from './mfc/popovers/popovers.component';
 import { CheckboxesComponent } from './mfc/checkboxes/checkboxes.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonSearchbar, IonicModule } from '@ionic/angular';
 
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -35,6 +36,17 @@ import { BreadcrumbComponent } from './mfc/breadcrumb/breadcrumb.component';
 import { ButtonsComponent } from './mfc/buttons/buttons.component';
 import { CardComponent } from './mfc/card/card.component';
 import { MenuComponent } from './mfc/menu/menu.component';
+import { DateTimeComponent } from './mfc/date-time/date-time.component';
+import { FloatingActionButtonComponent } from './mfc/floating-action-button/floating-action-button.component';
+import { InfiniteScrollComponent } from './mfc/infinite-scroll/infinite-scroll.component';
+import { ItemsComponent } from './mfc/items/items.component';
+import { AvaterComponent } from './mfc/media/avater/avater.component';
+import { ProgressIndicatorsComponent } from './mfc/progress-indicators/progress-indicators.component';
+import { RadioComponent } from './mfc/radio/radio.component';
+import { RangeComponent } from './mfc/range/range.component';
+import { SerchBarComponent } from './mfc/serch-bar/serch-bar.component';
+import { ToastComponent } from './mfc/toast/toast.component';
+import { ToggleComponent } from './mfc/toggle/toggle.component';
 
 register();
 
@@ -65,7 +77,19 @@ register();
     ButtonsComponent,
     CardComponent,
     MenuComponent,
-    CheckboxesComponent
+    CheckboxesComponent,
+    DateTimeComponent,
+    FloatingActionButtonComponent,
+    InfiniteScrollComponent,
+    ItemsComponent,
+    AvaterComponent,
+    PopoversComponent,
+    ProgressIndicatorsComponent,
+    RadioComponent,
+    RangeComponent,
+    SerchBarComponent,
+    ToastComponent,
+    ToggleComponent
 
   ],
   imports: [
@@ -101,7 +125,20 @@ register();
     ButtonsComponent,
     CardComponent,
     MenuComponent,
-    CheckboxesComponent
+    CheckboxesComponent,
+    DateTimeComponent,
+    FloatingActionButtonComponent,
+    InfiniteScrollComponent,
+    ItemsComponent,
+    AvaterComponent,
+    PopoversComponent,
+    ProgressIndicatorsComponent,
+    RadioComponent,
+    RangeComponent,
+    SerchBarComponent,
+    ToastComponent,
+    ToggleComponent
+
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

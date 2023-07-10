@@ -1,0 +1,6 @@
+@import "../../../../theme/typography.scss";
+
+h3 {
+  @include mfc-subtitle;
+  color: #f5593d
+}

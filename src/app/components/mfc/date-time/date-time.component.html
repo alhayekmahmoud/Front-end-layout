@@ -1,0 +1,31 @@
+<ion-col>
+  <ion-datetime-button datetime="datetime" color="tertiary"></ion-datetime-button>
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime id="datetime"></ion-datetime>
+    </ng-template>
+  </ion-modal>
+</ion-col>
+
+<ion-col>
+  <h3> wheel picker</h3>
+  <ion-datetime presentation="date-time" [preferWheel]="true"></ion-datetime>
+</ion-col>
+
+<ion-col>
+  <h3>Styling</h3>
+  <ion-datetime presentation="date" [highlightedDates]="highlightedDates"></ion-datetime>
+</ion-col>
+
+<ion-col>
+  <h3>Using isOpen</h3>
+  <ion-button (click)="setOpen(true)" color="mfc-info">Open</ion-button>
+<ion-picker
+  [isOpen]="isPickerOpen"
+  [columns]="pickerColumns"
+  [buttons]="pickerButtons"
+  (didDismiss)="setOpen(false)"
+></ion-picker>
+</ion-col>
+

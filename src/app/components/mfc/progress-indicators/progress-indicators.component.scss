@@ -1,0 +1,13 @@
+@import "../../../../theme/typography.scss";
+
+h3 {
+  @include mfc-subtitle;
+  position: relative;
+  color: #f5593d;
+  top:10px
+}
+
+ion-spinner {
+  width: 100px;
+  height: 100px;
+}

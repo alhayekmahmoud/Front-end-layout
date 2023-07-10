@@ -1,0 +1,25 @@
+<ion-item lines="none" color="mfc-info">
+  <ion-button id="popover-button" fill="clear" >Open Menu</ion-button>
+  <ion-popover  trigger="popover-button" [dismissOnSelect]="true">
+    <ng-template>
+      <ion-content class="ion-text-center">
+        <ion-list color="mfc-danger" >
+          <ion-item lines="none" [detail]="false">Option 1</ion-item>
+          <ion-item lines="none" [button]="true" [detail]="false">Option 2</ion-item>
+          <ion-item lines="none"[button]="true" id="nested-trigger">More options...</ion-item>
+
+          <ion-popover trigger="nested-trigger" [dismissOnSelect]="true" side="end">
+            <ng-template>
+              <ion-content>
+                <ion-list>
+                  <ion-item lines="none" [button]="true" [detail]="false">Nested option</ion-item>
+                </ion-list>
+              </ion-content>
+            </ng-template>
+          </ion-popover>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+</ion-item>
+

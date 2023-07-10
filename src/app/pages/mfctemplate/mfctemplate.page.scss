@@ -12,6 +12,8 @@ ion-menu {
 }
 
 ion-header {
+  border-color: transparent !important;
+  border-image-width: 0 !important;
   border: none;
     box-shadow: none;
   --min-height: 48px;
@@ -22,6 +24,11 @@ ion-header {
     --background: transparent;
     --bordr-color: transparent;
     --border:none;
+
+    ion-toolbar::shadow{
+      box-sizing: content-box;
+
+    }
   }
   ion-buttons[slot="end"] {
     margin-right: 20px;
@@ -48,4 +55,8 @@ ion-content {
       }
     }
   }
+}
+.toolbar-container{
+  box-sizing: content-box;
+
 }
