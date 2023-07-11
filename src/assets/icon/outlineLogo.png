@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="249.497mm" height="95.6604mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 79050.25 30308.9"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="637" font-variant="normal" class="str0" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Franklin Gothic Heavy">
+		<font-face-src>
+			<font-face-name name="Franklin Gothic Heavy"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="C" horiz-adv-x="628" d="M424 254l187.001 -11.166c-8.83347,-81.5001 -39.0003,-144 -90.5004,-187.5 -51.5001,-43.5001 -114.834,-65.3331 -190,-65.3331 -90.5004,0 -163.5,30 -219,89.8331 -55.667,59.8332 -83.4998,142.666 -83.4998,248 0,104.5 26.3329,188.833 79,253 52.6664,64.1661 126.166,96.1665 220.499,96.1665 88.1671,0 156,-24.3332 203.334,-73.0003 47.1665,-48.6664 73.9998,-113.333 80.167,-193.666l-191.001 -10.3334c0,44.4995 -8.49983,76.4999 -25.4995,96.3333 -17.0004,19.8334 -37.1667,29.6663 -60.1668,29.6663 -64.1668,0 -96.3333,-64.8334 -96.3333,-194.666 0,-72.6667 8.33301,-122.167 24.9997,-148.167 16.8336,-26.1668 40.3334,-39.1664 70.5002,-39.1664 53.8334,0 83.9995,36.6662 90.4997,109.999z"/>
+   <glyph unicode="F" horiz-adv-x="546" d="M475 250l-218 0 0 -250 -199 0 0 667 481.999 0 0 -159 -282.999 0 0 -108 218 0 0 -150z"/>
+   <glyph unicode="M" horiz-adv-x="840" d="M783 667l0 -667 -190 0 0 477 -124.167 -477 -129.833 0 -128 477 0 -477 -153 0 0 667 266.833 0 96.6662 -354.334 92.334 354.334 269.166 0z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Franklin Gothic Heavy";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str0 {stroke-width:3.83;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str1 {stroke:#FFCC00;stroke-width:167.67;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fnt0 {font-weight:normal;font-size:43873.7px;font-family:'Franklin Gothic Heavy'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <text x="-2460.85" y="29786.33"  class="fil0 str1 fnt0">MFC</text>
+ </g>
+</svg>

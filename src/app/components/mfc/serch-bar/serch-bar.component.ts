@@ -11,16 +11,16 @@ export class SerchBarComponent  implements OnInit {
 
   ngOnInit() {}
   public data = [
-    'Amsterdam',
-    'Buenos Aires',
-    'Cairo',
-    'Geneva',
-    'Hong Kong',
-    'Istanbul',
-    'London',
-    'Madrid',
-    'New York',
-    'Panama City',
+    'VW',
+    'BMW',
+    'Audi',
+    'Mercedes',
+    'Lamborghini',
+    'TOyota',
+    'Porsche',
+    'Ford',
+    'Tesla',
+    'Volvo',
   ];
   public results = [...this.data];
 

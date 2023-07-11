@@ -16,12 +16,13 @@ ion-header {
   }
 }
 
-
-ion-grid {
+ion-grid.car-image {
   ion-item {
     ion-label {
+      @include mfc-lable2;
     }
-    ion-button {
+    ion-text {
+      @include mfc-lable1;
     }
   }
   ion-row {
@@ -38,15 +39,87 @@ ion-grid {
         }
       }
       ion-card-content {
-        ion-item {
+        margin-top: 10px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        vertical-align: middle;
+
+        ion-chip.reight-select {
+          height: 70px;
+          display: inline-grid;
+          width: 70%;
+          margin-left: 10px;
+          padding: 10px !important;
+          border: 1px solid !important;
+          border-color: var(--ion-color-warning) !important;
+          border-radius: 5px;
           ion-label {
-            @include mfc-lable1;
+            @include mfc-subtitle;
           }
-          ion-text {
-            @include mfc-lable1;
+          ion-select {
+            @include mfc-lable3;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        ion-chip {
+          --background: none display: inline-grid;
+          height: 70px;
+          width: 100%;
+          margin-right: 10px;
+          padding: 10px !important;
+          border: 1px solid !important;
+          border-color: var(--ion-color-warning) !important;
+          border-radius: 5px;
+          ion-icon {
+            position: relative;
+            left: 35%;
+          }
+          .price-label {
+            @include mfc-lable3;
+          }
+          .tax-label {
+            @include mfc-subtitle;
           }
         }
       }
     }
+  }
+}
+
+ion-label.title {
+  @include mfc-lable2;
+}
+
+ion-grid.car-info {
+  padding-left: 30px;
+  padding-right: 10px;
+}
+ion-item.color-icon {
+  margin-right: 20px;
+  width: 45%;
+}
+ion-item.offer {
+  width: 45%;
+  ion-text {
+    @include mfc-lable1;
+  }
+}
+ion-card.car-details {
+  margin-top: 20px;
+  width: 90%;
+  box-shadow: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  h3 {
+    @include mfc-subtitle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

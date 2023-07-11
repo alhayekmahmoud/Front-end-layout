@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-item-group>
-    <ion-item lines="none" >
+    <ion-item lines="none">
       <div slot="end">
         <ion-thumbnail>
           <img src="../../../assets/images/logo.webp" alt="img">
@@ -13,25 +13,114 @@
   </ion-item-group>
 </ion-header>
 <ion-content>
-  <ion-grid class="ion-margin-top">
-    <ion-item lines="none"color="light">
+  <ion-grid class=" car-image ion-margin-top">
+    <ion-item lines="none" color="light">
       <ion-label class="title">{{car.name}}</ion-label>
+      <ion-text class="price" slot="end" color="primary"><b>{{car?.category}}</b></ion-text>
     </ion-item>
     <ion-row>
-          <ion-card class="ion-no-margin" >
-            <ion-card-header class="ion-no-padding">
-              <img [src]="car.img" alt="{{car.name}}">
-            </ion-card-header>
-            <ion-card-content class="ion-no-padding">
-              <ion-item lines="none">
-                <ion-label>
-                  {{car?.name}}
-                </ion-label>
-                <ion-text class="price" slot="end" color="primary"><b>{{car?.category}}</b></ion-text>
-              </ion-item>
-            </ion-card-content>
-          </ion-card>
+      <ion-card class="ion-no-margin">
+        <ion-card-header class="ion-no-padding">
+          <img [src]="car.img" alt="{{car.name}}">
+        </ion-card-header>
+        <ion-card-content class="ion-no-padding">
+
+          <ion-chip class="price-select">
+            <ion-grid>
+              <ion-row class="ion-align-items-center">
+                <ion-col>
+                  <ion-label class="price-label">price: {{car.price}}$</ion-label>
+                </ion-col>
+                <ion-col size="auto">
+                  <ion-icon slod="icon-only" name="alert-circle" size="large" color="tertiary"></ion-icon>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-label class="tax-label">tax fees included</ion-label>
+              </ion-row>
+
+            </ion-grid>
+
+
+
+          </ion-chip>
+
+          <ion-chip class="reight-select ion-align-items-center">
+            <ion-item lines="none">
+              <ion-label>virsion</ion-label>
+            </ion-item>
+            <ion-select aria-label="virsion" placeholder="Select virsion">
+              <ion-select-option *ngFor="let virsion of virsions" [value]="virsion">{{ virsion.virsion
+                }}</ion-select-option>
+            </ion-select>
+
+          </ion-chip>
+
+        </ion-card-content>
+      </ion-card>
     </ion-row>
   </ion-grid>
-</ion-content>
+  <ion-grid class="car-info ion-margin-top">
+    <ion-item lines="none">
+      <ion-label class="title">Select color</ion-label>
+    </ion-item>
+    <ion-row>
+      <ion-item class="color-icon" lines="none" color="light">
+        <ion-icon [name]="color === 'danger' ? 'ellipse' : 'ellipse-outline'" color="mfc-danger"
+          (click)="onSelectColor('danger')"></ion-icon>
+        <ion-icon [name]="color === 'default' ? 'ellipse' : 'ellipse-outline'" color="mfc-default"
+          (click)="onSelectColor('default')"></ion-icon>
+        <ion-icon [name]="color === 'white' ? 'ellipse' : 'ellipse-outline'" color="mfc-white"
+          (click)="onSelectColor('white')"></ion-icon>
+        <ion-icon [name]="color === 'info' ? 'ellipse' : 'ellipse-outline'" color="mfc-info"
+          (click)="onSelectColor('info')"></ion-icon>
+      </ion-item>
 
+
+      <ion-item class="offer" button detail="false" lines="none" color="dark" id="present-alert">
+        <ion-text>Get offers from Dealer</ion-text>
+        <ion-alert trigger="present-alert" header="Offer" subHeader="message to the Dealer" message={{car.name}}
+          [inputs]="alertInputs" [buttons]="alertButtons"></ion-alert>
+      </ion-item>
+
+
+    </ion-row>
+
+    <ion-card class="car-details ion-no-margin" color="mfc-light">
+      <ion-list>
+        <ion-item>
+          <ion-label>Price</ion-label>
+          <ion-label slot="end">{{car.price}}$</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Mileage</ion-label>
+          <ion-label slot="end">{{car.mileage}} kmpl</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Engine</ion-label>
+          <ion-label slot="end">{{car.Engine}} cc</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Transmission</ion-label>
+          <ion-label slot="end">{{car.transmission}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fuel Type</ion-label>
+          <ion-label slot="end">{{car.fueltype}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Seating Capacity</ion-label>
+          <ion-label slot="end">{{car.seatingCapacity}}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-card-content>
+        <h3>
+          we will be so habby to get yor massage
+        </h3>
+        <ion-button id="contact-alert" expand="block" color="tertiary" align="bottom">Contact Dealer</ion-button>
+        <ion-alert trigger="contact-alert" header="DealerName" subHeader="We care about your message"
+          message="Pleas fill all fields" [inputs]="contactAlertInputs" [buttons]="contactAlertButtons"></ion-alert>
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
+</ion-content>

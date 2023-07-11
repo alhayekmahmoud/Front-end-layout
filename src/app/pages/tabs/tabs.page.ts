@@ -12,6 +12,7 @@ export class TabsPage {
   @ViewChild('tabs', { static: false }) tabs!: IonTabs;
   selectedTab: any;
 
+  logoPathe="../../../assets/icon/logo.png";
   constructor(private router: Router, private storageService: StorageService) {}
 
   async setCurrentTab(){
