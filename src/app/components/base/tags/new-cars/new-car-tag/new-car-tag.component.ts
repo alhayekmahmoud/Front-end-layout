@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PopoverController } from '@ionic/angular';
+import { StorageService } from 'src/app/services/storage/storage.service';
 
 @Component({
   selector: 'mfc-new-car-tag',
@@ -20,8 +23,16 @@ export class NewCarTagComponent  implements OnInit {
 
   ];
 
-  constructor() { }
+  constructor(private router:Router, private storageService : StorageService) { }
 
   ngOnInit() {}
+
+  public  async buyNewCarHandlButton(activeSegment : string){
+    console.log('activeSegment', activeSegment);
+    await this.storageService.set<string>('activeSegment', activeSegment);
+    this.router.navigate(['/tabs/cars']);
+
+
+  }
 
 }

@@ -8,12 +8,15 @@ import { CarsListPageRoutingModule } from './cars-list-routing.module';
 
 import { CarsListPage } from './cars-list.page';
 
+import { ComponentSharedModule } from 'src/app/components/component-shared.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CarsListPageRoutingModule
+    CarsListPageRoutingModule,
+    ComponentSharedModule
   ],
   declarations: [CarsListPage]
 })

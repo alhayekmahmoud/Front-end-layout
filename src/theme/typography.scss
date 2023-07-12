@@ -72,14 +72,21 @@
 /** mfc template **/
 @mixin mfc-header1 {
   display: block;
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-family: "Titillium_Web" !important;
   font-weight: 300;
   line-height: 1.2;
   font-size: 3.6em;
 }
+@mixin mfc-header2 {
+  display: block;
+  font-family: "Titillium_Web" !important;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 1em;
+}
 @mixin mfc-title {
   display: block;
-  font-family: "Montserrat" !important;
+  font-family: "Titillium_Web" !important;
   font-weight: 300;
   line-height: 1.4;
   font-size: 1.8rem;
@@ -90,7 +97,7 @@
 }
 @mixin mfc-subtitle {
   display: block;
-  font-family: "Montserrat" !important;
+  font-family: "Titillium_Web" !important;
   font-weight: 300;
   line-height: 1.4;
   font-size: .8rem;

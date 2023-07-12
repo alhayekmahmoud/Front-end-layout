@@ -24,6 +24,10 @@ const routes: Routes = [
         path: 'mfc',
         loadChildren: () => import('../mfctemplate/mfctemplate.module').then( m => m.MfctemplatePageModule)
       },
+      {
+        path: 'cars',
+        loadChildren: () => import('../cars-list/cars-list.module').then( m => m.CarsListPageModule)
+      },
     ],
   },
 

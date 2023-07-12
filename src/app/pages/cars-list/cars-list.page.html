@@ -1,13 +1,32 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>cars-list</ion-title>
-  </ion-toolbar>
+  <ion-item-group>
+    <ion-item lines="none">
+      <div slot="end">
+        <ion-thumbnail>
+          <img src="../../../assets/images/logo.webp" alt="img">
+        </ion-thumbnail>
+      </div>
+      <div class="back" slot="start">
+        <ion-back-button defaultHref="tabs/home"></ion-back-button>
+      </div>
+    </ion-item>
+  </ion-item-group>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cars-list</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-segment [value]="activeSegment$ | async">
+  <ion-segment-button value="buy-new-car" (click)="activeSegment$.next('buy-new-car')">
+      <ion-label>Buy new car</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="buy-old-car" (click)="activeSegment$.next('buy-old-car')">
+      <ion-label>Buy old car</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div *ngIf="(activeSegment$ | async) === 'buy-new-car'">
+    <mfc-new-cars-list></mfc-new-cars-list>
+  </div>
+  <div *ngIf="(activeSegment$ | async) === 'buy-old-car'">
+    <mfc-old-cars-list></mfc-old-cars-list>
+  </div>
+
 </ion-content>
