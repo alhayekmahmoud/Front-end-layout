@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true">
+  <div class="title ion-text-start ion-text-uppercase">
+    <h1>
+      regist<br />
+      to explore<br />
+      the car<br>
+      world
+    </h1>
+  </div>
+  <ion-grid class="email-input">
+
+      <ion-text class="email-label ion-text-center" color="mfc-white"> Enter your valid E-mail</ion-text>
+
+    <ion-item class="input-item" lines="none">
+      <ion-input label="register" label-placement="floating" fill="outline" placeholder="Enter your E-mail"></ion-input>
+    </ion-item>
+
+      <ion-text class="slogin ion-text-center" color="mfc-white"> We will send you a top</ion-text>
+
+      <ion-button class="submit" expand="block" color="tertiary" align="bottom" (click)="onSignUpButtonCliked()">Submit</ion-button>
+  </ion-grid>
+</ion-content>

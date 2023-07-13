@@ -14,19 +14,7 @@ import { HomeOldCarComponent } from './base/home-old-car/home-old-car.component'
 import { HomeSellCarComponent } from './base/home-sell-car/home-sell-car.component';
 
 import { register } from 'swiper/element/bundle';
-import { NewCarTagComponent } from './base/tags/new-cars/new-car-tag/new-car-tag.component';
-import { OldCarTagComponent } from './base/tags/old-car-tag/old-car-tag.component';
-import { SellCarTagComponent } from './base/tags/sell-car-tag/sell-car-tag.component';
-import { TopCarTagComponent } from './base/tags/new-cars/top-car-tag/top-car-tag.component';
-import { ExpertReviewTagComponent } from './base/tags/new-cars/expert-review-tag/expert-review-tag.component';
-import { BrandTagComponent } from './base/tags/new-cars/brand-tag/brand-tag.component';
-import { OfferTagComponent } from './base/tags/new-cars/offer-tag/offer-tag.component';
 
-import { OldBrandTagComponent } from './base/tags/old-car-tag/old-brand-tag/old-brand-tag.component';
-import { NewLunchedCarComponent } from './base/tags/old-car-tag/new-lunched-car/new-lunched-car.component';
-import { OldExpertReviewTagComponent } from './base/tags/old-car-tag/old-expert-review-tag/old-expert-review-tag.component';
-import { OldOfferTagComponent } from './base/tags/old-car-tag/old-offer-tag/old-offer-tag.component';
-import { OldTopCareTagComponent } from './base/tags/old-car-tag/old-top-care-tag/old-top-care-tag.component';
 import { RouterModule } from '@angular/router';
 import { ActionSheetComponent } from './mfc/action-sheet/action-sheet.component';
 import { AccordionComponent } from './mfc/accordion/accordion.component';
@@ -47,8 +35,15 @@ import { RangeComponent } from './mfc/range/range.component';
 import { SerchBarComponent } from './mfc/serch-bar/serch-bar.component';
 import { ToastComponent } from './mfc/toast/toast.component';
 import { ToggleComponent } from './mfc/toggle/toggle.component';
+
 import { NewCarsListComponent } from './base/new-cars-list/new-cars-list.component';
 import { OldCarsListComponent } from './base/old-cars-list/old-cars-list.component';
+
+import { NewLunchedComponent } from './taga/new-lunched/new-lunched.component';
+import { BrandTagComponent } from './taga/brand-tag/brand-tag.component';
+import { OfferTagComponent } from './taga/offer-tag/offer-tag.component';
+import { TopCarTagComponent } from './taga/top-car-tag/top-car-tag.component';
+import { ExpertReviewTagComponent } from './taga/expert-review-tag/expert-review-tag.component';
 
 register();
 
@@ -59,19 +54,17 @@ register();
     HomeNewCarComponent,
     HomeOldCarComponent,
     HomeSellCarComponent,
-    NewCarTagComponent,
-    OldCarTagComponent,
-    SellCarTagComponent,
-    TopCarTagComponent,
-    ExpertReviewTagComponent,
-    BrandTagComponent,
     NewCarsListComponent,
+
+
+    // import tage components
+    BrandTagComponent,
+    ExpertReviewTagComponent,
+    NewLunchedComponent,
     OfferTagComponent,
-    OldBrandTagComponent,
-    NewLunchedCarComponent,
-    OldExpertReviewTagComponent,
-    OldOfferTagComponent,
-    OldTopCareTagComponent,
+    TopCarTagComponent,
+
+    // import mfc component
     ActionSheetComponent,
     AccordionComponent,
     AlertComponent,
@@ -109,18 +102,17 @@ register();
     HomeNewCarComponent,
     HomeOldCarComponent,
     HomeSellCarComponent,
-    NewCarTagComponent,
-    OldCarTagComponent,
-    SellCarTagComponent,
-    TopCarTagComponent,
-    ExpertReviewTagComponent,
+
+
+
+    // export tags component
     BrandTagComponent,
+    ExpertReviewTagComponent,
+    NewLunchedComponent,
     OfferTagComponent,
-    OldBrandTagComponent,
-    NewLunchedCarComponent,
-    OldExpertReviewTagComponent,
-    OldOfferTagComponent,
-    OldTopCareTagComponent,
+    TopCarTagComponent,
+
+    //export mfc components
     ActionSheetComponent,
     AccordionComponent,
     AlertComponent,

@@ -20,4 +20,11 @@ export class LoginCardComponent  implements OnInit {
     this.router.navigate(['/start']);
   }
 
+  public  async onSignUpButtonCliked(activeSegment : string){
+    await this.storageService.set<boolean>('isloged',true)
+    this.router.navigate(['/signup']);
+
+
+  }
+
 }

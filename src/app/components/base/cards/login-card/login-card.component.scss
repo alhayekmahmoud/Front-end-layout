@@ -21,4 +21,12 @@ ion-card {
     top: 80%;
     left: 50%;
   }
+
+  ion-button.signup {
+    position: absolute;
+    width: 80%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 90%;
+    left: 50%;
+  }
 }

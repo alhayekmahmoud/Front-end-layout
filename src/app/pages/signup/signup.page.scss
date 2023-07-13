@@ -1,0 +1,49 @@
+
+@import '../../../theme/typography.scss';
+ion-content{
+  --background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, -0.5)), url(../../../assets/images/signup/bg.png)0 0/100% 100% no-repeat;
+  .title{
+    h1 {
+      @include mfc-headline1;
+      position: relative;
+      display: block;
+      color: var(--ion-color-tertiary);
+      top: 50px;
+      left: 28%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  ion-item.input-item{
+    position: relative;
+    top: 230px;
+    width: 80%;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ion-text.email-label{
+    @include mfc-subtitle;
+    position: relative;
+    top: 220px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    opacity: 0.5;
+  }
+  ion-text.slogin{
+    @include mfc-subtitle;
+    position: relative;
+    top: 262px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    opacity: 0.5;
+  }
+  ion-button.submit{
+    position: fixed;
+    width: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 75%;
+    left: 50%;
+  }
+}
