@@ -10,7 +10,8 @@ import { PopoverController } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-   selectedSegment: any;
+   selectedSegment!: string;
+
    public activeSegment$ = new BehaviorSubject<string>('');
 
   constructor(private popCtrl: PopoverController, private storageService: StorageService) {
@@ -18,12 +19,19 @@ export class HomePage implements OnInit {
    }
 
   async ngOnInit() {
+     this.selectedSegment = await this.storageService.get<string>('activeSegment')
+
+
     const selectedSegment = await this.storageService.get<string>('activeSegment')
-    console.log('selected Segment',selectedSegment);
+
 
     this.activeSegment$.next(selectedSegment)
   }
 
+public setActiveSegment(activSegment:string){
+  this.selectedSegment=activSegment;
 
+  console.log('selected Segment',this.selectedSegment);
+}
 
 }

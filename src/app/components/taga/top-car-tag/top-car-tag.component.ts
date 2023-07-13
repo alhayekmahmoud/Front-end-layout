@@ -6,20 +6,18 @@ import { DataService } from 'src/app/services/data/data.service';
   templateUrl: './top-car-tag.component.html',
   styleUrls: ['./top-car-tag.component.scss'],
 })
-export class TopCarTagComponent  implements OnInit {
-  @Input()  activeSegment!:any;
+export class TopCarTagComponent implements OnInit {
+  @Input() activeSegment!: string;
 
- topCars: any[]=[];
+  topCars: any[] = [];
 
+  constructor(private dataService: DataService) {}
 
-  constructor(private dataService: DataService) {
-    if(this.activeSegment ==='buy-new-car'){
-      this.topCars = dataService.getNewTopCars();
-    }else{
-      this.topCars = dataService.getOldTopCars();
+  ngOnInit() {
+    if (this.activeSegment === 'buy-new-car') {
+      this.topCars = this.dataService.getNewTopCars();
+    } else {
+      this.topCars = this.dataService.getOldTopCars();
     }
   }
-
-  ngOnInit() {}
-
 }

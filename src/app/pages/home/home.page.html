@@ -13,26 +13,27 @@
   </ion-item-group>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-    <ion-segment [value]="activeSegment$ | async">
-  <ion-segment-button value="buy-new-car" (click)="activeSegment$.next('buy-new-car')">
-      <ion-label>Buy new car</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="buy-old-car" (click)="activeSegment$.next('buy-old-car')">
-      <ion-label>Buy old car</ion-label>
-    </ion-segment-button>
-   <ion-segment-button value="sell-my-car" (click)="activeSegment$.next('sell-my-car')">
-      <ion-label>Sell my car</ion-label>
-    </ion-segment-button>
-  </ion-segment>
 
-  <div *ngIf="(activeSegment$ | async) === 'buy-new-car'">
-    <mfc-home-new-car [activeSegment]="activeSegment$"></mfc-home-new-car>
-  </div>
-  <div *ngIf="(activeSegment$ | async) === 'buy-old-car'">
-    <mfc-home-old-car  [activeSegment]="activeSegment$"></mfc-home-old-car>
-  </div>
-  <div *ngIf="(activeSegment$ | async) === 'sell-my-car'">
-    <mfc-home-sell-car  [activeSegment]="activeSegment$"></mfc-home-sell-car>
-  </div>
+<ion-content [fullscreen]="true">
+  <ion-segment [value]="selectedSegment">
+<ion-segment-button value="buy-new-car" (click)="setActiveSegment('buy-new-car')">
+    <ion-label>Buy new car</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="buy-old-car" (click)="setActiveSegment('buy-old-car')">
+    <ion-label>Buy old car</ion-label>
+  </ion-segment-button>
+ <ion-segment-button value="sell-my-car" (click)="setActiveSegment('sell-my-car')">
+    <ion-label>Sell my car</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<div *ngIf="selectedSegment === 'buy-new-car'">
+  <mfc-home-new-car [activeSegment]="selectedSegment"></mfc-home-new-car>
+</div>
+<div *ngIf="selectedSegment === 'buy-old-car'">
+  <mfc-home-old-car  [activeSegment]="selectedSegment"></mfc-home-old-car>
+</div>
+<div *ngIf="selectedSegment === 'sell-my-car'">
+  <mfc-home-sell-car  [activeSegment]="selectedSegment"></mfc-home-sell-car>
+</div>
 </ion-content>

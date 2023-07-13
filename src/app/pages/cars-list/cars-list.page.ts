@@ -13,27 +13,33 @@ export class CarsListPage implements OnInit {
   selectedSegment: any;
   public activeSegment$ = new BehaviorSubject<string>('');
 
- constructor(private popCtrl: PopoverController, private storageService: StorageService) {
-
+  constructor(
+    private popCtrl: PopoverController,
+    private storageService: StorageService
+  ) {
+    this.getActiveSegment();
   }
 
- async ngOnInit() {
-   const selectedSegment = await this.storageService.get<string>('activeSegment')
-   console.log('selected Segment',selectedSegment);
+  async ngOnInit() {}
 
-   this.activeSegment$.next(selectedSegment)
- }
+  async getActiveSegment() {
+    const selectedSegment = await this.storageService.get<string>(
+      'carsListActiveSegment'
+    );
+    console.log('selected Segment', selectedSegment);
 
- async openPopOver(ev: any) {
-   console.log('I am Popo over');
-   const popover = await this.popCtrl.create({
-     component: PopoverMenuComponent,
-     event: ev,
-     translucent: true,
-     size: 'auto',
-     dismissOnSelect: true,
-   });
-   return await popover.present();
- }
+    this.activeSegment$.next(selectedSegment);
+  }
 
+  async openPopOver(ev: any) {
+    console.log('I am Popo over');
+    const popover = await this.popCtrl.create({
+      component: PopoverMenuComponent,
+      event: ev,
+      translucent: true,
+      size: 'auto',
+      dismissOnSelect: true,
+    });
+    return await popover.present();
+  }
 }
