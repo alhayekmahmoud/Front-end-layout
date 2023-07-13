@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'mfc-offer-tag',
@@ -6,19 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offer-tag.component.scss'],
 })
 export class OfferTagComponent  implements OnInit {
+  @Input()  activeSegment!:any;
+
+  bestOffers: any[]=[]
 
 
-  bestOffers: any[]=[
-
-    {id:1, img:'assets/images/home/bestOffer/o1.jpg'},
-    {id:2, img:'assets/images/home/bestOffer/o2.jpg'},
-    {id:3, img:'assets/images/home/bestOffer/o4.jpg'},
-    {id:4, img:'assets/images/home/bestOffer/o5.jpg'},
-    {id:5, img:'assets/images/home/bestOffer/o6.jpg'},
-  ]
-
-
-  constructor() { }
+  constructor(private dataservice: DataService) {
+    this.bestOffers = this.dataservice.getBestOffers();
+   }
 
   ngOnInit() {}
 

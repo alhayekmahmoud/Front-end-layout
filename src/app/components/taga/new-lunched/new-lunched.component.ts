@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'mfc-new-lunched',
@@ -6,21 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-lunched.component.scss'],
 })
 export class NewLunchedComponent  implements OnInit {
+  @Input()  activeSegment!:any;
 
-  newLunched: any[]=[
+  newLunched: any[]=[];
 
-    {id:1, name:'BMW', price:700, category:'er5', img:'assets/images/home/newCars/BMW5.jpg'},
-    {id:2, name:'BMW', price:700, category:'er6', img:'assets/images/home/newCars/BMW6.jpg'},
-
-    {id:7, name:'VW', price:700, category:'er1', img:'assets/images/home/newCars/vw1.jpg'},
-    {id:8, name:'VW', price:700, category:'er2', img:'assets/images/home/newCars/vw2.jpg'},
-
-    {id:13, name:'Mercedes', price:700, category:'er1', img:'assets/images/home/newCars/MERCIDES1.jpg'},
-    {id:14, name:'Mercedes', price:700, category:'er2', img:'assets/images/home/newCars/MERCIDES2.jpg'},
-
-  ];
-
-  constructor() { }
+  constructor(private dataService: DataService) {
+    if(this.activeSegment ==='buy-new-car'){
+      this.newLunched = dataService.getNewNewLunchedCars();
+    }else{
+      this.newLunched = dataService.getOldNewLunchedCars();
+    }
+   }
 
   ngOnInit() {}
 

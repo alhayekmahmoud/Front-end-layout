@@ -24,16 +24,6 @@ export class HomePage implements OnInit {
     this.activeSegment$.next(selectedSegment)
   }
 
-  async openPopOver(ev: any) {
-    console.log('I am Popo over');
-    const popover = await this.popCtrl.create({
-      component: PopoverMenuComponent,
-      event: ev,
-      translucent: true,
-      size: 'auto',
-      dismissOnSelect: true,
-    });
-    return await popover.present();
-  }
+
 
 }

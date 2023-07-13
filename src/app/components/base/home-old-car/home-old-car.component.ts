@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'mfc-home-old-car',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-old-car.component.scss'],
 })
 export class HomeOldCarComponent  implements OnInit {
-
+  @Input()  activeSegment!:any;
   constructor() { }
 
   ngOnInit() {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { register } from 'swiper/element/bundle';
 
@@ -12,6 +12,7 @@ register();
   styleUrls: ['./home-new-car.component.scss'],
 })
 export class HomeNewCarComponent  implements OnInit {
+  @Input()  activeSegment!:any;
 
   cars: any[]=[
     {id:1, name:'BMW', price:700, category:'er5', img:'assets/images/home/newCars/BMW5.jpg'},

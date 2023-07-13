@@ -25,13 +25,14 @@
       <ion-label>Sell my car</ion-label>
     </ion-segment-button>
   </ion-segment>
+
   <div *ngIf="(activeSegment$ | async) === 'buy-new-car'">
-    <mfc-home-new-car></mfc-home-new-car>
+    <mfc-home-new-car [activeSegment]="activeSegment$"></mfc-home-new-car>
   </div>
   <div *ngIf="(activeSegment$ | async) === 'buy-old-car'">
-    <mfc-home-old-car></mfc-home-old-car>
+    <mfc-home-old-car  [activeSegment]="activeSegment$"></mfc-home-old-car>
   </div>
   <div *ngIf="(activeSegment$ | async) === 'sell-my-car'">
-    <mfc-home-sell-car></mfc-home-sell-car>
+    <mfc-home-sell-car  [activeSegment]="activeSegment$"></mfc-home-sell-car>
   </div>
 </ion-content>

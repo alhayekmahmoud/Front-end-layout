@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'mfc-expert-review-tag',
@@ -6,15 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./expert-review-tag.component.scss'],
 })
 export class ExpertReviewTagComponent  implements OnInit {
-  expertsReview: any[]=[
+  @Input()  activeSegment!:any;
+  expertsReview: any[]=[]
 
-    {id:1, img:'assets/images/home/expertReview/ex1.jpg'},
-    {id:2, img:'assets/images/home/expertReview/ex2.jpg'},
-    {id:3, img:'assets/images/home/expertReview/ex3.jpg'},
-
-  ]
-
-  constructor() { }
+  constructor(private dataservice: DataService) {
+    this.expertsReview= this.dataservice.getExpertsReview();
+  }
 
   ngOnInit() {}
 

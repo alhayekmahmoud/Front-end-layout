@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data/data.service';
 import { register } from 'swiper/element/bundle';
 
 register();
@@ -9,22 +10,12 @@ register();
   styleUrls: ['./brand-tag.component.scss'],
 })
 export class BrandTagComponent  implements OnInit {
+  @Input()  activeSegment!:any;
+  brands: any[]=[];
 
-  brands: any[]=[
-
-    {id:1, img:'assets/images/home/Brands/l1.png'},
-    {id:2, img:'assets/images/home/Brands/l2.png'},
-    {id:3, img:'assets/images/home/Brands/l3.png'},
-    {id:4, img:'assets/images/home/Brands/l4.png'},
-    {id:5, img:'assets/images/home/Brands/l5.png'},
-    {id:6, img:'assets/images/home/Brands/l6.png'},
-    {id:7, img:'assets/images/home/Brands/l7.png'},
-    {id:8, img:'assets/images/home/Brands/l8.jpg'},
-    {id:9, img:'assets/images/home/Brands/l9.jpg'},
-    {id:10, img:'assets/images/home/Brands/l10.jpg'}
-  ]
-
-  constructor() { }
+  constructor(private dataservice: DataService) {
+    this.brands = this.dataservice.getBrands();
+  }
 
   ngOnInit() {}
 
