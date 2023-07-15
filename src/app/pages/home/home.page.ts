@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
 
    public activeSegment$ = new BehaviorSubject<string>('');
 
-  constructor(private popCtrl: PopoverController, private storageService: StorageService) {
+  constructor(private storageService: StorageService) {
 
    }
 
