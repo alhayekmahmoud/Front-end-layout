@@ -1,8 +1,6 @@
 import { StorageService } from 'src/app/services/storage/storage.service';
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { PopoverMenuComponent } from 'src/app/components/base/popover-menu/popover-menu.component';
-import { PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'mfc-cars-list',
@@ -14,7 +12,6 @@ export class CarsListPage implements OnInit {
   public activeSegment$ = new BehaviorSubject<string>('');
 
   constructor(
-    private popCtrl: PopoverController,
     private storageService: StorageService
   ) {
     this.getActiveSegment();
@@ -29,17 +26,5 @@ export class CarsListPage implements OnInit {
     console.log('selected Segment', selectedSegment);
 
     this.activeSegment$.next(selectedSegment);
-  }
-
-  async openPopOver(ev: any) {
-    console.log('I am Popo over');
-    const popover = await this.popCtrl.create({
-      component: PopoverMenuComponent,
-      event: ev,
-      translucent: true,
-      size: 'auto',
-      dismissOnSelect: true,
-    });
-    return await popover.present();
   }
 }
