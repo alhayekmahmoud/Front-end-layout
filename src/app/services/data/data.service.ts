@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-
+import {CarsInterface} from './../../types/cars.interface'
+import { NewLunchedComponent } from 'src/app/components/taga/new-lunched/new-lunched.component';
 @Injectable({
   providedIn: 'root',
 })
@@ -8,42 +9,45 @@ export class DataService {
   constructor() {}
 
   public getBrands() {
-    return [
-      { id: 1, img: 'assets/images/home/Brands/l1.png' },
-      { id: 2, img: 'assets/images/home/Brands/l2.png' },
-      { id: 3, img: 'assets/images/home/Brands/l3.png' },
-      { id: 4, img: 'assets/images/home/Brands/l4.png' },
-      { id: 5, img: 'assets/images/home/Brands/l5.png' },
-      { id: 6, img: 'assets/images/home/Brands/l6.png' },
-      { id: 7, img: 'assets/images/home/Brands/l7.png' },
-      { id: 8, img: 'assets/images/home/Brands/l8.jpg' },
-      { id: 9, img: 'assets/images/home/Brands/l9.jpg' },
-      { id: 10, img: 'assets/images/home/Brands/l10.jpg' },
+    let brands:CarsInterface[]= [
+      { id: '1', img: 'assets/images/home/Brands/l1.png' },
+      { id: '2', img: 'assets/images/home/Brands/l2.png' },
+      { id: '3', img: 'assets/images/home/Brands/l3.png' },
+      { id: '4', img: 'assets/images/home/Brands/l4.png' },
+      { id: '5', img: 'assets/images/home/Brands/l5.png' },
+      { id: '6', img: 'assets/images/home/Brands/l6.png' },
+      { id: '7', img: 'assets/images/home/Brands/l7.png' },
+      { id: '8', img: 'assets/images/home/Brands/l8.jpg' },
+      { id: '9', img: 'assets/images/home/Brands/l9.jpg' },
+      { id: '10', img: 'assets/images/home/Brands/l10.jpg' },
     ];
+    return brands
   }
 
   public getExpertsReview() {
-    return  [
-      { id: 1, img: 'assets/images/home/expertReview/ex1.jpg' },
-      { id: 2, img: 'assets/images/home/expertReview/ex2.jpg' },
-      { id: 3, img: 'assets/images/home/expertReview/ex3.jpg' },
+     let Reviews:CarsInterface[]= [
+      { id: '1', img: 'assets/images/home/expertReview/ex1.jpg' },
+      { id: '2', img: 'assets/images/home/expertReview/ex2.jpg' },
+      { id: '3', img: 'assets/images/home/expertReview/ex3.jpg' },
     ];
+    return Reviews
   }
 
   public getBestOffers(){
-    return [
-      {id:1, img:'assets/images/home/bestOffer/o1.jpg'},
-      {id:2, img:'assets/images/home/bestOffer/o2.jpg'},
-      {id:3, img:'assets/images/home/bestOffer/o4.jpg'},
-      {id:4, img:'assets/images/home/bestOffer/o5.jpg'},
-      {id:5, img:'assets/images/home/bestOffer/o6.jpg'},
-    ]
+    let bestOffers:CarsInterface[]= [
+      {id:'1', img:'assets/images/home/bestOffer/o1.jpg'},
+      {id:'2', img:'assets/images/home/bestOffer/o2.jpg'},
+      {id:'3', img:'assets/images/home/bestOffer/o4.jpg'},
+      {id:'4', img:'assets/images/home/bestOffer/o5.jpg'},
+      {id:'5', img:'assets/images/home/bestOffer/o6.jpg'},
+    ];
+    return  bestOffers
 
 
 
   }
   public getNewTopCars(){
-    return [
+    let newTopCars:CarsInterface[]= [
 
       {
         id: '1',
@@ -170,27 +174,29 @@ export class DataService {
     },
 
     ]
+    return newTopCars;
   }
   public getOldTopCars(){
-    return [
+    let oldTopCars:CarsInterface[]=[
 
 
-      {id:10, name:'VW', price:700, category:'er4', img:'assets/images/home/newCars/vw4.jpg'},
-      {id:11, name:'VW', price:700, category:'er5', img:'assets/images/home/newCars/vw5.jpg'},
-      {id:12, name:'VW', price:700, category:'er6', img:'assets/images/home/newCars/vw6.jpg'},
+      {id:'10', name:'VW', price:700, category:'er4', img:'assets/images/home/newCars/vw4.jpg'},
+      {id:'11', name:'VW', price:700, category:'er5', img:'assets/images/home/newCars/vw5.jpg'},
+      {id:'12', name:'VW', price:700, category:'er6', img:'assets/images/home/newCars/vw6.jpg'},
 
-      {id:16, name:'Mercedes', price:700, category:'er4', img:'assets/images/home/newCars/MERCIDES4.jpg'},
-      {id:17, name:'Mercedes', price:700, category:'er5', img:'assets/images/home/newCars/MERCIDES5.jpg'},
-      {id:18, name:'Mercedes', price:700, category:'er6', img:'assets/images/home/newCars/MERCIDES6.jpg'},
+      {id:'16', name:'Mercedes', price:700, category:'er4', img:'assets/images/home/newCars/MERCIDES4.jpg'},
+      {id:'17', name:'Mercedes', price:700, category:'er5', img:'assets/images/home/newCars/MERCIDES5.jpg'},
+      {id:'18', name:'Mercedes', price:700, category:'er6', img:'assets/images/home/newCars/MERCIDES6.jpg'},
 
-      {id:4, name:'BMW', price:700, category:'er8', img:'assets/images/home/newCars/BMW8.jpg'},
-      {id:5, name:'BMW', price:700, category:'er9', img:'assets/images/home/newCars/BMW9.jpg'},
-      {id:6, name:'BMW', price:700, category:'er10', img:'assets/images/home/newCars/BMW10.jpg'},
+      {id:'4', name:'BMW', price:700, category:'er8', img:'assets/images/home/newCars/BMW8.jpg'},
+      {id:'5', name:'BMW', price:700, category:'er9', img:'assets/images/home/newCars/BMW9.jpg'},
+      {id:'6', name:'BMW', price:700, category:'er10', img:'assets/images/home/newCars/BMW10.jpg'},
 
-    ]
+    ];
+    return oldTopCars
   }
   public getNewNewLunchedCars(){
-    return [
+    let newLunchedCars:CarsInterface[]=[
       {
       id: '9',
       name: 'VW',
@@ -265,25 +271,27 @@ export class DataService {
       seatingCapacity: 2
     }
     ];
+    return newLunchedCars;
   }
 
   public getOldNewLunchedCars(){
-    return [
+    let oldNewLunchedCars:CarsInterface[]= [
 
-      {id:1, name:'BMW', price:700, category:'er5', img:'assets/images/home/newCars/BMW5.jpg'},
-      {id:2, name:'BMW', price:700, category:'er6', img:'assets/images/home/newCars/BMW6.jpg'},
+      {id:'1', name:'BMW', price:700, category:'er5', img:'assets/images/home/newCars/BMW5.jpg'},
+      {id:'2', name:'BMW', price:700, category:'er6', img:'assets/images/home/newCars/BMW6.jpg'},
 
-      {id:7, name:'VW', price:700, category:'er1', img:'assets/images/home/newCars/vw1.jpg'},
-      {id:8, name:'VW', price:700, category:'er2', img:'assets/images/home/newCars/vw2.jpg'},
+      {id:'7', name:'VW', price:700, category:'er1', img:'assets/images/home/newCars/vw1.jpg'},
+      {id:'8', name:'VW', price:700, category:'er2', img:'assets/images/home/newCars/vw2.jpg'},
 
-      {id:13, name:'Mercedes', price:700, category:'er1', img:'assets/images/home/newCars/MERCIDES1.jpg'},
-      {id:14, name:'Mercedes', price:700, category:'er2', img:'assets/images/home/newCars/MERCIDES2.jpg'},
+      {id:'13', name:'Mercedes', price:700, category:'er1', img:'assets/images/home/newCars/MERCIDES1.jpg'},
+      {id:'14', name:'Mercedes', price:700, category:'er2', img:'assets/images/home/newCars/MERCIDES2.jpg'},
 
     ];
+    return oldNewLunchedCars;
   }
 
   public getAllCars(){
-    return [
+    let allCars:CarsInterface[]=[
       {
         id: '1',
         name: 'BMW',
@@ -503,12 +511,12 @@ export class DataService {
         seatingCapacity: 2
       },
     ];
-
+    return allCars
   }
 
 
   public getAllNewCars(){
-    return [
+    let allNewCars:CarsInterface[]=[
       {
         id: '16',
         name: 'Mercedes',
@@ -729,11 +737,13 @@ export class DataService {
         seatingCapacity: 2
       },
     ];
+
+    return allNewCars
 
   }
 
   public getAllOLdCars(){
-    return [
+    let allOldCars:CarsInterface[]=[
       {
         id: '1',
         name: 'BMW',
@@ -953,6 +963,7 @@ export class DataService {
         seatingCapacity: 2
       },
     ];
+    return allOldCars
 
   }
 }
