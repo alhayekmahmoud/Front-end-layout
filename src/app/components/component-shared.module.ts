@@ -36,9 +36,6 @@ import { SerchBarComponent } from './mfc/serch-bar/serch-bar.component';
 import { ToastComponent } from './mfc/toast/toast.component';
 import { ToggleComponent } from './mfc/toggle/toggle.component';
 
-import { NewCarsListComponent } from './base/new-cars-list/new-cars-list.component';
-import { OldCarsListComponent } from './base/old-cars-list/old-cars-list.component';
-
 import { NewLunchedComponent } from './taga/new-lunched/new-lunched.component';
 import { BrandTagComponent } from './taga/brand-tag/brand-tag.component';
 import { OfferTagComponent } from './taga/offer-tag/offer-tag.component';
@@ -56,7 +53,6 @@ register();
     HomeNewCarComponent,
     HomeOldCarComponent,
     HomeSellCarComponent,
-    NewCarsListComponent,
     CarListComponent,
 
 
@@ -89,7 +85,6 @@ register();
     SerchBarComponent,
     ToastComponent,
     ToggleComponent,
-    OldCarsListComponent,
     SwiperComponent
 
   ],
@@ -139,8 +134,6 @@ register();
     SerchBarComponent,
     ToastComponent,
     ToggleComponent,
-    NewCarsListComponent,
-    OldCarsListComponent,
     SwiperComponent
 
 
