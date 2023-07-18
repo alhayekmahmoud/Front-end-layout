@@ -44,6 +44,8 @@ import { BrandTagComponent } from './taga/brand-tag/brand-tag.component';
 import { OfferTagComponent } from './taga/offer-tag/offer-tag.component';
 import { TopCarTagComponent } from './taga/top-car-tag/top-car-tag.component';
 import { ExpertReviewTagComponent } from './taga/expert-review-tag/expert-review-tag.component';
+import { SwiperComponent } from './mfc/swiper/swiper.component';
+import { CarListComponent } from './base/car-list/car-list.component';
 
 register();
 
@@ -55,6 +57,7 @@ register();
     HomeOldCarComponent,
     HomeSellCarComponent,
     NewCarsListComponent,
+    CarListComponent,
 
 
     // import tage components
@@ -86,7 +89,8 @@ register();
     SerchBarComponent,
     ToastComponent,
     ToggleComponent,
-    OldCarsListComponent
+    OldCarsListComponent,
+    SwiperComponent
 
   ],
   imports: [
@@ -102,6 +106,7 @@ register();
     HomeNewCarComponent,
     HomeOldCarComponent,
     HomeSellCarComponent,
+    CarListComponent,
 
 
 
@@ -135,7 +140,8 @@ register();
     ToastComponent,
     ToggleComponent,
     NewCarsListComponent,
-    OldCarsListComponent
+    OldCarsListComponent,
+    SwiperComponent
 
 
   ],

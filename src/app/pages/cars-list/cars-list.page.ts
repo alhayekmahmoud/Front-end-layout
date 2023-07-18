@@ -8,23 +8,17 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./cars-list.page.scss'],
 })
 export class CarsListPage implements OnInit {
-  selectedSegment: any;
-  public activeSegment$ = new BehaviorSubject<string>('');
+  selectedSegment='buy-new-car';
 
-  constructor(
-    private storageService: StorageService
-  ) {
-    this.getActiveSegment();
+  constructor(private storageService: StorageService) {}
+
+  async ngOnInit() {
   }
 
-  async ngOnInit() {}
 
-  async getActiveSegment() {
-    const selectedSegment = await this.storageService.get<string>(
-      'carsListActiveSegment'
-    );
-    console.log('selected Segment', selectedSegment);
+  async setActiveSegment(activeSegment: string) {
+     this.selectedSegment = activeSegment;
+    // console.log('selected Segment', this.selectedSegment);
 
-    this.activeSegment$.next(selectedSegment);
   }
 }

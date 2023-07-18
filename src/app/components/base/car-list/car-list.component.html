@@ -1,0 +1,112 @@
+
+<ion-grid class=" car-image ion-margin-top" *ngIf="activeSegment ==='buy-new-car'; else oldCarList">
+  <ion-item class="top-banner" lines="none" color="light">
+    <ion-label class="title ion-text-center">Her you can buy ur dream new care</ion-label>
+  </ion-item>
+  <ion-list class="cars-list"  >
+
+    <ion-list-header>
+      <ion-label color="medium">cars list</ion-label>
+      <ion-label class="price-label" color="medium">price</ion-label>
+    </ion-list-header>
+
+    <ion-item-group>
+      <ion-item lines="none" detail="false" *ngFor="let car of newcars " [routerLink]="['/', 'car', car.id]">
+        <div>
+          <ion-thumbnail slot="start" class="ion-text-center">
+            <img src="{{car.img}}" alt="img">
+          </ion-thumbnail>
+        </div>
+
+        <ion-label>
+          <ion-text class="ion-margin">{{car.name }}</ion-text>
+          <p>
+            <ion-text class="ion-margin">
+              {{car.category}}
+            </ion-text>
+          </p>
+        </ion-label>
+        <ion-text slot="end" color="primary">
+          {{car.price}}$
+        </ion-text>
+      </ion-item>
+    </ion-item-group>
+
+  </ion-list>
+</ion-grid>
+
+<ng-template #oldCarList>
+
+<ion-grid class=" car-image ion-margin-top">
+  <ion-item class="top-banner" lines="none" color="light">
+    <ion-label class="title ion-text-center">Her you can buy ur dream used care</ion-label>
+  </ion-item>
+  <ion-list class="cars-list"  >
+
+    <ion-list-header>
+      <ion-label color="medium">cars list</ion-label>
+      <ion-label class="price-label" color="medium">price</ion-label>
+    </ion-list-header>
+
+    <ion-item-group>
+      <ion-item lines="none" detail="false" *ngFor="let car of oldcars " [routerLink]="['/', 'car', car.id]">
+        <div>
+          <ion-thumbnail slot="start" class="ion-text-center">
+            <img src="{{car.img}}" alt="img">
+          </ion-thumbnail>
+        </div>
+
+        <ion-label>
+          <ion-text class="ion-margin">{{car.name }}</ion-text>
+          <p>
+            <ion-text class="ion-margin">
+              {{car.category}}
+            </ion-text>
+          </p>
+        </ion-label>
+        <ion-text slot="end" color="primary">
+          {{car.price}}$
+        </ion-text>
+      </ion-item>
+    </ion-item-group>
+
+  </ion-list>
+</ion-grid>
+
+</ng-template>
+<!--
+<ion-grid class=" car-image ion-margin-top">
+  <ion-item class="top-banner" lines="none" color="light">
+    <ion-label class="title ion-text-center">Her you can buy ur dream used care</ion-label>
+  </ion-item>
+  <ion-list class="cars-list"  >
+
+    <ion-list-header>
+      <ion-label color="medium">cars list</ion-label>
+      <ion-label class="price-label" color="medium">price</ion-label>
+    </ion-list-header>
+
+    <ion-item-group>
+      <ion-item lines="none" detail="false" *ngFor="let car of cars " [routerLink]="['/', 'car', car.id]">
+        <div>
+          <ion-thumbnail slot="start" class="ion-text-center">
+            <img src="{{car.img}}" alt="img">
+          </ion-thumbnail>
+        </div>
+
+        <ion-label>
+          <ion-text class="ion-margin">{{car.name }}</ion-text>
+          <p>
+            <ion-text class="ion-margin">
+              {{car.category}}
+            </ion-text>
+          </p>
+        </ion-label>
+        <ion-text slot="end" color="primary">
+          {{car.price}}$
+        </ion-text>
+      </ion-item>
+    </ion-item-group>
+
+  </ion-list>
+</ion-grid> -->
