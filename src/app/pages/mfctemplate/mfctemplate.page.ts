@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mfctemplate',
@@ -10,6 +10,11 @@ export class MfctemplatePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  @HostListener('ionScroll', ['$event']) onContentScroll($event:any){
+    const scrollTop= $event.detail.scrollTop;
+    let newPostion= -(scrollTop/5);
+    console.log('scrollTop', scrollTop);
   }
   close(){}
 
