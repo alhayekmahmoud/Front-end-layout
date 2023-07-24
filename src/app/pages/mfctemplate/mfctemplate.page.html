@@ -32,8 +32,18 @@
 
 <ion-content [fullscreen]="true" scrollEvents="true" [appFadeHeader]="toolbar">
   <!-- <ion-content [fullscreen]="true" scrollEvents="true" [appHideHeader]="header" > -->
-  <img src="assets/images/mfc/headerBackground.png" alt="HeaderImage">
   <ion-grid class="ion-no-margin">
+    <ion-row class="header-image">
+      <ion-col class="logo-contianer"  *ngFor="let temp of templates;" #templateList>
+        <ion-item class=" logo ion-no-padding" lines="none">
+          <ion-img [src]="temp.background"> </ion-img>
+        </ion-item>
+        <ion-item class="slogin ion-no-padding" lines="none">
+          <ion-label> {{temp.text}} </ion-label>
+        </ion-item>
+      </ion-col>
+   <img src="assets/images/mfc/headerBackground.png" alt="HeaderImage">
+    </ion-row>
     <ion-row>
       <div class="component-title">
         <h3>Action-sheet</h3>
