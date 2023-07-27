@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card4-header.component.scss'],
 })
 export class Card4HeaderComponent  implements OnInit {
-
+  public progress = .459;
   constructor() { }
 
   ngOnInit() {}

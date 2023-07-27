@@ -2,15 +2,41 @@
 
 ion-card {
   @include mfc-card;
-}
-
-
-ion-card-header{
+  ion-card-header{
     ion-item{
       @include mfc-card-header;
       h1{
         @include mfc-card-text-header1;
       }
+
     }
 }
+ion-progress-bar{
+  background: tan;
+  height: 10px;
+  border-radius: 5px;
+
+}
+
+
+
+ion-progress-bar::part(progress){
+  background: var(--ion-color-mfc-warning);
+}
+
+ion-card-content{
+  @include mfc-card-content;
+  h3{
+    text-align: start;
+  }
+  p{
+   color: var(--ion-color-mfc-default) !important;
+  }
+  h1{
+    color: var(--ion-color-mfc-warning) !important;
+  }
+}
+
+}
+
 

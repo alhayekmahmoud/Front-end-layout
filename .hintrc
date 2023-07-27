@@ -14,7 +14,8 @@
       {
         "ignore": [
           "ion-item[part]",
-          "div[part]"
+          "div[part]",
+          "ion-progress-bar[part]"
         ]
       }
     ]

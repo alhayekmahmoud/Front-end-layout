@@ -1,34 +1,28 @@
 <ion-card class="mini-card1">
-          <ion-card-header>
-            <ion-item class="card1-header-item" lines="none">
-              <h1>Card 1</h1>
-              <ion-button fill="clear" slot="end" id="popover-button1">Open Menu</ion-button>
-              <ion-popover trigger="popover-button1" [dismissOnSelect]="true">
-                <ng-template>
-                  <ion-content>
-                    <ion-list>
-                      <ion-item [button]="true" [detail]="false">Option 1</ion-item>
-                      <ion-item [button]="true" [detail]="false">Option 2</ion-item>
-                      <ion-item [button]="true" id="nested-trigger">More options...</ion-item>
+          <ion-card-header class="ion-no-padding">
 
-                      <ion-popover trigger="nested-trigger" [dismissOnSelect]="true" side="end">
-                        <ng-template>
-                          <ion-content>
-                            <ion-list>
-                              <ion-item [button]="true" [detail]="false">Nested option</ion-item>
-                            </ion-list>
-                          </ion-content>
-                        </ng-template>
-                      </ion-popover>
-                    </ion-list>
-                  </ion-content>
-                </ng-template>
-              </ion-popover>
-
-            </ion-item>
           </ion-card-header>
           <ion-card-content>
-            <h4 class="ion-text-center">I am a Mini Card Content Here</h4>
+            <ion-item lines="none" color="clear">
+              <ion-label slot="start">
+                <h3>Total Orders</h3>
+                <p>last year expenses</p>
+              </ion-label>
+              <ion-label  slot="end">
+                <h1>1896</h1>
+
+              </ion-label>
+            </ion-item>
+
+            <ion-progress-bar part="progress"[value]="progress"></ion-progress-bar>
+            <ion-item lines="none" color="clear">
+              <ion-label slot="start">
+                <p>Growth</p>
+              </ion-label>
+              <ion-label  slot="end">
+                <p>100%</p>
+              </ion-label>
+            </ion-item>
           </ion-card-content>
 
         </ion-card>

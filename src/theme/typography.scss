@@ -125,17 +125,27 @@
   display: flex;
     flex-direction: column;
     border-radius: 5px;
-    background-color: #424242;
-    border-width: 0;
+    background-color: #ffffff;
+    border-width: 1px;
     border-style: solid;
     box-shadow: var(--mdc-elevated-card-container-elevation);
 }
 @mixin mfc-card-header{
   display: flex;
-  padding: 10px 10px 0;
+  padding: 4px 4px 0 !important;
   flex-direction: column;
   border-radius: 2px;
-  --background: #424242;
+  --background: transparent;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: none;
+}
+@mixin mfc-card-content{
+  display: flex;
+  padding: 4px 4px 0 !important;
+  flex-direction: column;
+  border-radius: 2px;
+  --background: transparent;
   border-width: 0;
   border-style: solid;
   box-shadow: none;
@@ -145,7 +155,7 @@
   font-family: "Titillium_Web" !important;
   font-weight: 600;
   line-height: 1.2;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 @mixin mfc-card-text-header2{
   display: block;
