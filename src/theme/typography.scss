@@ -115,3 +115,42 @@
   color: #fff;
   opacity: 1;
 }
+@mixin mfc-card{
+  height: 100%;
+  position: inherit;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #424242;
+    border-width: 0;
+    border-style: solid;
+    box-shadow: var(--mdc-elevated-card-container-elevation);
+}
+@mixin mfc-card-header{
+  display: flex;
+  padding: 10px 10px 0;
+  flex-direction: column;
+  border-radius: 2px;
+  --background: #424242;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: none;
+}
+@mixin mfc-card-text-header1{
+  display: block;
+  font-family: "Titillium_Web" !important;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 1.5em;
+}
+@mixin mfc-card-text-header2{
+  display: block;
+  font-family: "Titillium_Web" !important;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 1em;
+}

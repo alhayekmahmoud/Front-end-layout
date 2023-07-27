@@ -8,6 +8,15 @@
       {
         "aria-allowed-attr": "off"
       }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "ion-item[part]",
+          "div[part]"
+        ]
+      }
     ]
   }
 }

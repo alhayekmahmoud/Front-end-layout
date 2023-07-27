@@ -9,8 +9,8 @@ ion-grid {
     }
   }
   ion-row {
+    height: 100%;
     swiper-container {
-      height: 150px;
       swiper-slide {
         margin: 0;
         display: flex;
@@ -26,6 +26,8 @@ ion-grid {
             padding: 5px;
             img {
               border-radius: 10px;
+              height: 100%;
+              object-fit: cover;
             }
           }
           ion-card-content {
@@ -43,3 +45,12 @@ ion-grid {
     }
   }
 }
+@media(min-width: 580px ) {
+  ion-grid {
+    height: 40rem;
+  }
+  ion-card-header {
+    height: 35rem;
+  }
+}
+

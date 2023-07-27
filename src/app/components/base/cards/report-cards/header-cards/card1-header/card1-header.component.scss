@@ -1,0 +1,15 @@
+@import '../../../../../../../theme/typography.scss';
+
+ion-card {
+  @include mfc-card;
+}
+
+
+ion-card-header{
+    ion-item{
+      @include mfc-card-header;
+      h1{
+        @include mfc-card-text-header1;
+      }
+    }
+}

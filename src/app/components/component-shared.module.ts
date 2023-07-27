@@ -43,6 +43,15 @@ import { TopCarTagComponent } from './taga/top-car-tag/top-car-tag.component';
 import { ExpertReviewTagComponent } from './taga/expert-review-tag/expert-review-tag.component';
 import { SwiperComponent } from './mfc/swiper/swiper.component';
 import { CarListComponent } from './base/car-list/car-list.component';
+import { Card1HeaderComponent } from './base/cards/report-cards/header-cards/card1-header/card1-header.component';
+import { Card2HeaderComponent } from './base/cards/report-cards/header-cards/card2-header/card2-header.component';
+import { Card3HeaderComponent } from './base/cards/report-cards/header-cards/card3-header/card3-header.component';
+import { Card4HeaderComponent } from './base/cards/report-cards/header-cards/card4-header/card4-header.component';
+import { Card1ChartComponent } from './base/cards/report-cards/chart-cards/card1-chart/card1-chart.component';
+import { Card2ChartComponent } from './base/cards/report-cards/chart-cards/card2-chart/card2-chart.component';
+import { Card1TableComponent } from './base/cards/report-cards/table-cards/card1-table/card1-table.component';
+import { Card2TableComponent } from './base/cards/report-cards/table-cards/card2-table/card2-table.component';
+import { MapCardComponent } from './base/cards/report-cards/map-card/map-card.component';
 
 register();
 
@@ -85,7 +94,20 @@ register();
     SerchBarComponent,
     ToastComponent,
     ToggleComponent,
-    SwiperComponent
+    SwiperComponent,
+
+    Card1HeaderComponent,
+    Card2HeaderComponent,
+    Card3HeaderComponent,
+    Card4HeaderComponent,
+
+    Card1ChartComponent,
+    Card2ChartComponent,
+
+    Card1TableComponent,
+    Card2TableComponent,
+
+    MapCardComponent
 
   ],
   imports: [
@@ -134,7 +156,22 @@ register();
     SerchBarComponent,
     ToastComponent,
     ToggleComponent,
-    SwiperComponent
+    SwiperComponent,
+
+    Card1HeaderComponent,
+    Card2HeaderComponent,
+    Card3HeaderComponent,
+    Card4HeaderComponent,
+
+    Card1ChartComponent,
+    Card2ChartComponent,
+
+    Card1TableComponent,
+    Card2TableComponent,
+
+    MapCardComponent
+
+
 
 
   ],

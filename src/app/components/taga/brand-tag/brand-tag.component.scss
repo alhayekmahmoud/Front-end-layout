@@ -10,7 +10,7 @@ ion-grid {
   }
   ion-row {
     swiper-container {
-      height: 200px;
+      // height: 200px;
       background: black;
       swiper-slide {
         background: white;
@@ -43,5 +43,20 @@ ion-grid {
         }
       }
     }
+  }
+}
+@media(min-width: 992px ) {
+  swiper-container {
+    height: 35rem;
+  }
+}
+@media(min-width:786px ) {
+  swiper-container {
+    height: 35rem;
+  }
+}
+@media(min-width: 580px ) {
+  swiper-container {
+    height: 40rem;
   }
 }

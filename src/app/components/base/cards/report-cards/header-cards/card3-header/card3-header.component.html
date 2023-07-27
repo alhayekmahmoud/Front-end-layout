@@ -1,0 +1,34 @@
+<ion-card class="mini-card3">
+  <ion-card-header>
+    <ion-item class="card1-header-item" lines="none">
+      <h1>Card 3</h1>
+      <ion-button fill="clear" slot="end" id="popover-button3">Open Menu</ion-button>
+      <ion-popover trigger="popover-button3" [dismissOnSelect]="true">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item [button]="true" [detail]="false">Option 1</ion-item>
+              <ion-item [button]="true" [detail]="false">Option 2</ion-item>
+              <ion-item [button]="true" id="nested-trigger">More options...</ion-item>
+
+              <ion-popover trigger="nested-trigger" [dismissOnSelect]="true" side="end">
+                <ng-template>
+                  <ion-content>
+                    <ion-list>
+                      <ion-item [button]="true" [detail]="false">Nested option</ion-item>
+                    </ion-list>
+                  </ion-content>
+                </ng-template>
+              </ion-popover>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-popover>
+
+    </ion-item>
+  </ion-card-header>
+  <ion-card-content>
+    <h4 class="ion-text-center">I am a Mini Card Content Here</h4>
+  </ion-card-content>
+
+</ion-card>

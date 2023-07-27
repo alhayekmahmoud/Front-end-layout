@@ -269,6 +269,78 @@ export class DataService {
       transmission: 'Manual and AMT',
       fueltype: 'petrol',
       seatingCapacity: 2
+    },{
+      id: '9',
+      name: 'VW',
+      price: 700,
+      category: 'er3',
+      img: 'assets/images/home/newCars/vw3.jpg',
+      mileage: 21.21,
+      Engine:1197,
+      transmission: 'Manual and AMT',
+      fueltype: 'petrol',
+      seatingCapacity: 2
+    },
+    {
+      id: '10',
+      name: 'VW',
+      price: 700,
+      category: 'er4',
+      img: 'assets/images/home/newCars/vw4.jpg',
+      mileage: 21.21,
+      Engine:1197,
+      transmission: 'Manual and AMT',
+      fueltype: 'petrol',
+      seatingCapacity: 2
+    },
+
+     {
+      id: '15',
+      name: 'Mercedes',
+      price: 700,
+      category: 'er3',
+      img: 'assets/images/home/newCars/MERCIDES3.jpg',
+      mileage: 21.21,
+      Engine:1197,
+      transmission: 'Manual and AMT',
+      fueltype: 'petrol',
+      seatingCapacity: 2
+    },
+    {
+      id: '16',
+      name: 'Mercedes',
+      price: 700,
+      category: 'er4',
+      img: 'assets/images/home/newCars/MERCIDES4.jpg',
+      mileage: 21.21,
+      Engine:1197,
+      transmission: 'Manual and AMT',
+      fueltype: 'petrol',
+      seatingCapacity: 2
+    },
+    {
+      id: '3',
+      name: 'BMW',
+      price: 700,
+      category: 'er7',
+      img: 'assets/images/home/newCars/BMW7.jpg',
+      mileage: 21.21,
+      Engine:1197,
+      transmission: 'Manual and AMT',
+      fueltype: 'petrol',
+      seatingCapacity: 2
+    },
+    {
+      id: '4',
+      name: 'BMW',
+      price: 700,
+      category: 'er8',
+      img: 'assets/images/home/newCars/BMW8.jpg',
+      mileage: 21.21,
+      Engine:1197,
+      transmission: 'Manual and AMT',
+      fueltype: 'petrol',
+      seatingCapacity: 2
     }
     ];
     return newLunchedCars;

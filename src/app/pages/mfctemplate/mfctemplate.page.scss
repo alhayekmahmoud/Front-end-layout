@@ -40,9 +40,17 @@ ion-header {
 ion-content {
   --offset-top: 0px;
   position: absolute;
-  ion-row {
 
-    margin: 10px auto;
+
+  ion-row {
+    div.header-bg {
+      position: relative;
+      width: 100%;
+      height: 788px;
+      background: url(../../../assets/images/mfc/headerBackground.png) no-repeat center ;
+      background-size: cover;
+    }
+    // margin: 10px auto;
     div.component-title {
       display: block;
       margin-left: auto;
@@ -56,52 +64,54 @@ ion-content {
     }
   }
 }
-// ion-chip {
-//   transform: translate(-50%, -50%);
-//     left: 7.5%;
-//     position: fixed;
-//     width: 85%;
-//     display: block;
-//     /* margin-left: auto; */
-//     /* margin-right: auto; */
-//     height: 21%;
-//     top: 20%;
-// }
-.logo-contianer {
-  transform: translate(-50%, -50%);
-    left: 7.5%;
-    position: fixed;
-    width: 85%;
-    display: block;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    height: 21%;
-    top: 20%;
-}
-.logo{
-  position: fixed;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: 25%;
-  --background: none;
-}
-.slogin{
-  @include mfc-title;
-  color: aquamarine;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: 60%;
-  --background: none;
 
-}
 .toolbar-container {
   box-sizing: content-box;
 }
+ion-list {
+  background: none;
+  transform: translate(-50%, -50%);
+  left: 7.5%;
+  position: absolute;
+  width: 85%;
+  display: block;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  height: 21%;
+  top: 35%;
+  .logo {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 25%;
+    --background: none;
+  }
+  .slogin {
+    @include mfc-title;
+    color: aquamarine;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    --background: none;
+  }
+}
 
+@media(min-width: 580px ) {
+  ion-list {
+    height: 55%;
+    top: 12%;
+
+    .slogin {
+
+      font-size: 3.8rem
+    }
+  }
+
+}

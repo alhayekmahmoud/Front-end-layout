@@ -4,7 +4,11 @@
       <ion-title>Menu Content</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">This is the menu content.</ion-content>
+  <ion-content class="ion-padding">
+    <h1>This is the menu content.</h1>
+    <ion-button fill="clear" color="success"  [routerLink]="['/', 'report']">Report</ion-button>
+  </ion-content>
+
 </ion-menu>
 
 <ion-header>
@@ -32,18 +36,23 @@
 
 <ion-content [fullscreen]="true" scrollEvents="true" [appFadeHeader]="toolbar">
   <!-- <ion-content [fullscreen]="true" scrollEvents="true" [appHideHeader]="header" > -->
+
+
+  <!-- <img src="assets/images/mfc/headerBackground.png" alt="HeaderImage"> -->
+
   <ion-grid class="ion-no-margin">
-    <ion-row class="header-image">
-      <ion-col class="logo-contianer"  *ngFor="let temp of templates;" #templateList>
+    <ion-row>
+      <div part="bg-header" class="header-bg" lines="none"></div>
+      <ion-list class="logo-contianer" *ngFor="let temp of templates;" #templateList>
         <ion-item class=" logo ion-no-padding" lines="none">
           <ion-img [src]="temp.background"> </ion-img>
         </ion-item>
         <ion-item class="slogin ion-no-padding" lines="none">
           <ion-label> {{temp.text}} </ion-label>
         </ion-item>
-      </ion-col>
-   <img src="assets/images/mfc/headerBackground.png" alt="HeaderImage">
+      </ion-list>
     </ion-row>
+
     <ion-row>
       <div class="component-title">
         <h3>Action-sheet</h3>
