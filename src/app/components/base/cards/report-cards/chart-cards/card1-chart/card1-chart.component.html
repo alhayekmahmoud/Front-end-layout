@@ -30,6 +30,15 @@
   <ion-card-content>
     <div class="text">
       <h4 class="ion-text-center">I am a Mini Card Content Here</h4>
+      <div id="chart">
+        <apx-chart
+          [series]="chartOptions.series!"
+          [chart]="chartOptions.chart!"
+          [plotOptions]="chartOptions.plotOptions!"
+          [labels]="chartOptions.labels!"
+          [fill]="chartOptions.fill!"
+        ></apx-chart>
+      </div>
     </div>
 
 

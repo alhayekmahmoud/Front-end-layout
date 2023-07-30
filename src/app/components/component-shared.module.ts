@@ -52,6 +52,7 @@ import { Card2ChartComponent } from './base/cards/report-cards/chart-cards/card2
 import { Card1TableComponent } from './base/cards/report-cards/table-cards/card1-table/card1-table.component';
 import { Card2TableComponent } from './base/cards/report-cards/table-cards/card2-table/card2-table.component';
 import { MapCardComponent } from './base/cards/report-cards/map-card/map-card.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 register();
 
@@ -114,7 +115,8 @@ register();
     CommonModule,
      IonicModule,
      TranslocoRootModule,
-     RouterModule
+     RouterModule,
+     NgApexchartsModule
     ],
   exports: [
     LoginCardComponent,
