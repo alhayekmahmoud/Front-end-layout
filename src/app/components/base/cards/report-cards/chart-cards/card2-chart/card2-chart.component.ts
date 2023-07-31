@@ -24,12 +24,12 @@ export class Card2ChartComponent  implements OnInit {
     this.chart = new Chart("MyChart2", {
       type: 'pie',
       data: {
-        labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+        labels: ["Total Orders", "Clients", "Products Sold", "Followers"],
         datasets: [
           {
             label: "Population (millions)",
-            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-            data: [2478,5267,734,784,433]
+            backgroundColor: ["#7dd7ef", "#045a65","#6bd098","#fbc658"],
+            data: [6000,400,1100,2500]
           }
         ]
       },

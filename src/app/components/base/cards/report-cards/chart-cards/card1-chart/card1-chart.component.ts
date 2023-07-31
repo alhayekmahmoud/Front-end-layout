@@ -48,7 +48,7 @@ export class Card1ChartComponent  implements OnInit {
       },
       series: [12],
       colors: ["#045a65"],
-      labels: ["client"]
+      labels: ["clients"]
 
     };
     this.productSoldChartOptions = {
@@ -68,7 +68,7 @@ export class Card1ChartComponent  implements OnInit {
       },
       series: [45.9],
       colors: ["#fbc658"],
-      labels: ["Total Orders"]
+      labels: ["followers"]
 
     };
   }
