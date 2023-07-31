@@ -1,5 +1,17 @@
+
 <ion-card class="mini-card1">
   <ion-card-header>
+
+  <ion-segment [value]="selectedSegment">
+    <ion-segment-button value="bar-chart" (click)="setActiveSegment('bar-chart')">
+        <ion-label>Bar Chat</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="pie-chart" (click)="setActiveSegment('pie-chart')">
+        <ion-label>Pie Chart</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+
     <ion-item class="card1-header-item" lines="none">
       <h1>Chart 2</h1>
       <ion-button fill="clear" slot="end" id="popover-button1">Open Menu</ion-button>
@@ -28,22 +40,19 @@
     </ion-item>
   </ion-card-header>
   <ion-card-content>
-    <ion-grid>
-      <ion-row>
-        <label class="ion-text-center" >I am a Mini Card Content Here</label>
-        <div class="charts">
-          <div class="chart-container">
-            <canvas  id="MyChart2" class="ion-no-margin" >{{ chart }}</canvas>
-          </div>
 
-          <div class="pie">
+    <div *ngIf="selectedSegment === 'bar-chart'">
 
-          </div>
-          <div class="line"></div>
-        </div>
-      </ion-row>
-    </ion-grid>
-
+      <mfc-bar-char-tag  [activeSegment]="selectedSegment"></mfc-bar-char-tag>
+    </div>
+    <div *ngIf="selectedSegment === 'pie-chart'">
+      <mfc-pie-chart-tag [activeSegment]="selectedSegment"></mfc-pie-chart-tag>
+    </div>
   </ion-card-content>
 
 </ion-card>
+
+
+
+
+

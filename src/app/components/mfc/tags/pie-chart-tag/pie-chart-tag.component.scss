@@ -1,0 +1,21 @@
+@import '../../../../../theme/typography.scss';
+
+
+  ion-grid{
+    ion-row{
+      display: block;
+      .chart-container{
+        max-width: 400px;
+        max-height: 400px;
+        display:block  !important;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+      }
+    }
+  }
+  label{
+     @include mfc-card-header;
+  }
+
+

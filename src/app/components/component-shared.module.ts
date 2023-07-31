@@ -3,7 +3,7 @@ import { CheckboxesComponent } from './mfc/checkboxes/checkboxes.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { IonSearchbar, IonicModule } from '@ionic/angular';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {TranslocoRootModule} from 'src/app/transloco-root.module'
@@ -53,6 +53,8 @@ import { Card1TableComponent } from './base/cards/report-cards/table-cards/card1
 import { Card2TableComponent } from './base/cards/report-cards/table-cards/card2-table/card2-table.component';
 import { MapCardComponent } from './base/cards/report-cards/map-card/map-card.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { PieChartTagComponent } from './mfc/tags/pie-chart-tag/pie-chart-tag.component';
+import { BarCharTagComponent } from './mfc/tags/bar-char-tag/bar-char-tag.component';
 
 register();
 
@@ -64,6 +66,7 @@ register();
     HomeOldCarComponent,
     HomeSellCarComponent,
     CarListComponent,
+
 
 
     // import tage components
@@ -104,6 +107,8 @@ register();
 
     Card1ChartComponent,
     Card2ChartComponent,
+    PieChartTagComponent,
+    BarCharTagComponent,
 
     Card1TableComponent,
     Card2TableComponent,
@@ -116,7 +121,9 @@ register();
      IonicModule,
      TranslocoRootModule,
      RouterModule,
-     NgApexchartsModule
+     NgApexchartsModule,
+     HttpClientModule,
+
     ],
   exports: [
     LoginCardComponent,
@@ -167,6 +174,8 @@ register();
 
     Card1ChartComponent,
     Card2ChartComponent,
+    PieChartTagComponent,
+    BarCharTagComponent,
 
     Card1TableComponent,
     Card2TableComponent,
